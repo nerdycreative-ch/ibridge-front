@@ -1044,9 +1044,6 @@ input[type="radio"] {
 	#name-and-profession {
 		padding-left:0px;
 	}
-	.user .vertical-line{
-		display: none;
-	}
 	#job-and-education .vertical-line {
 		display:inline;
 		border:0.5px solid rgba(6,
@@ -1165,6 +1162,9 @@ input[type="radio"] {
 @media screen and (max-width: 768px) {
 	.company:not(:last-child) {
 		margin-right:30px;
+	}
+	.user .vertical-line{
+		display: none;
 	}
 }
 @media screen and (max-width: 360px) {
