@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<!-- FONT ICON -->
+	
+	
+	<!-- SUMMERNOTE --><!-- include summernote css/js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+
+	
+
+
+
+</head>
+<body>
+<!---------------header-------------->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<span class="logo align-middle">LOGO</span>
+				</div>
+				<div class="col-6">
+					<span class="user">
+						<a href="#" class="align-middle">John</a>
+						<a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i></a>
+						<a href="#" class="arrow-icon align-middle"><i class="icon-ib-arrow-down"></i></a>
+						<a href="#"><i class="icon-ib-menu" id="menu-icon"></i></a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</header>	
+	<div class="container" id="container">
+		<div class="row">
+			<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+				<div class="" id="steps-skip-row">
+					<svg viewBox="0 0 36 36" class="circular-chart blue">
+						<path class="circle-bg" d="M18 2.0845 
+												a 15.9155 15.9155 0 0 1 0 31.831
+												a 15.9155 15.9155 0 0 1 0 -31.831"/>
+						<path class="circle-step2" stroke-dasharray="50, 100" d="M18 2.0845
+												a 15.9155 15.9155 0 0 1 0 31.831
+												a 15.9155 15.9155 0 0 1 0 -31.831"/>
+					</svg>
+					<p class="steps">Setup guide: 2 of 4 steps complete</p>
+				</div>
+				<p class="step-name">Entrepreneur / Startup</p>
+				<hr id="header-hr">
+				<p class="main-info">Main Information</p>
+			
+
+
+<!---------------- Main Information ------------>
+				<form action="#" method="POST">
+					<div class="row">
+							<div class="col-md-6">
+								<label class="first-name">First name</label>
+								<input class="form-control" name="first-name" id="first-name" type="text" placeholder="John" disabled />
+							</div>
+							<div class="col-md-6">
+								<label class="last-name">Last name</label>
+								<input class="form-control" name="last-name" id="last-name" type="text" disabled />
+							</div>
+					</div>
+
+					<div class="row">
+							<div class="col-md-6">
+							<label class="date-of-birth"> Date of birth</label>
+							<input class="form-control" name="birthday" id="birthday" type="date"  placeholder="dd/mm/yyyy" />
+							</div>
+							<div class="col-md-6">
+							<label class="email-address">Email Address</label>
+							<input class="form-control" name="email" id="email" type="email" disabled />
+							</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+								<label class="name-of-institution">Name of the institution</label>
+								<input class="form-control" name="institution" id="institution" type="text" />
+						</div>
+					</div>
+	<!----------------- Company --------------->
+					<div class="row">
+						<div class="col-md-12" id="companies-col">
+							<div class="companies" >
+								<input type="radio" name="company" id="company1"><label class="company" for="company1"><span class="company-padding">Private Company</span></label>	
+								<input type="radio" name="company" id="company4"><label class="company" for="company4"><span class="company-padding">Public Company</span></label>
+								<input type="radio" name="company" id="company2"><label class="company" for="company2"><span class="company-padding">Private Person</span></label>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+							<div class="col-md-12">
+								<label class="business-unit-name">Bussiness unit name</label>
+								<input class="form-control" name="business-unit-name" id="business-unit-name" type="text" />
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-12">
+									<label class="address">Address</label>
+									<input class="form-control" name="address" id="address" type="text" />
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<label class="company-website-url">Company website URL</label>
+							<input class="form-control" name="company-website-url" id="company-website-url" type="url" placeholder="http://"/>
+						</div>			
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<label class="personal-website-url">Personal website URL</label>
+							<input class="form-control" name="personal-website-url" id="personal-website-url" type="url" placeholder="http://" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<label class="linkedin-url">Linkedin URL</label>
+							<input class="form-control" name="linkedin-url" id="linkedin-url" type="url" placeholder="http://" pattern="http://.*" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<label class="phone-number">Phone number</label>
+							<input class="form-control" name="phone-number" id="phone-number" type="text" />
+						</div>
+					</div>
+
+
+	<!---------------- Interests ------------>	
+
+
+					<div class="row">
+						<div class="col-md-12" id="interests-row" >
+							<p class="interests">Interests</p>
+						
+								<input type="checkbox" name="consumer-goods" id="consumer-goods"><label class="interests-label" for="consumer-goods"><span class="interest-padding">Consumer Goods</span></label>
+								<input type="checkbox" name="education" id="education"><label class="interests-label" for="education"><span class="interest-padding">Education</span></label>
+								<input type="checkbox" name="energy-greentext" id="energy-greentext"><label class="interests-label" for="energy-greentext"><span class="interest-padding">Energy & Greentext</span></label>
+								<input type="checkbox" name="entertainment" id="entertainment"><label class="interests-label" for="entertainment"><span class="interest-padding">Entertainment</span></label>
+								<input type="checkbox" name="finance" id="finance"><label class="interests-label" for="finance"><span class="interest-padding">Fincane</span></label>
+								<input type="checkbox" name="healthtech" id="healthtech"><label class="interests-label" for="healthtech"><span class="interest-padding">Healthtech</span></label>
+								<input type="checkbox" name="high-tech" id="high-tech"><label class="interests-label" for="high-tech"><span class="interest-padding">High Tech</span></label>
+								<input type="checkbox" name="impact-tech" id="impact-tech"><label class="interests-label"for="impact-tech"><span class="interest-padding">Impact Tech</span></label>
+								<input type="checkbox" name="it-software" id="it-software"><label class="interests-label" for="it-software"><span class="interest-padding">IT & Software</span></label>
+								<input type="checkbox" name="media" id="media"><label class="interests-label" for="media"><span class="interest-padding">Media</span></label>
+								<input type="checkbox" name="maritime-transport" id="maritime-transport"><label class="interests-label" for="maritime-transport"><span class="interest-padding">Maritime & Transport</span></label>
+								<input type="checkbox" name="saas" id="saas"><label class="interests-label" for="saas"><span class="interest-padding">Saas</span></label>
+								<input type="checkbox" name="service" id="service"><label class="interests-label" for="service"><span class="interest-padding">Service</span></label>
+								<input type="checkbox" name="other" id="other"><label class="interests-label" for="other"><span class="interest-padding">Other</span></label>
+							
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+	<!---------------- What describes you better ------------>
+					<div class="row">
+						<div class="col-md-12" id="describes-row">
+								<p class="what-describes-you-better">What describes you better</p>
+
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category1"><label class="describes-label" for="category1"><span class="describes-padding">Category 1</span></label>
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category2"><label class="describes-label" for="category2"><span class="describes-padding">Category 2</span></label>
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category3"><label class="describes-label" for="category3"><span class="describes-padding">Category 3</span></label>
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category4"><label class="describes-label" for="category4"><span class="describes-padding">Category 4</span></label>
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category5"><label class="describes-label" for="category5"><span class="describes-padding">Category 5</span></label>
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category6"><label class="describes-label" for="category6"><span class="describes-padding">Category 6</span></label> 
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category7"><label class="describes-label" for="category7"><span class="describes-padding">Category 7</span></label>
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+							<div class="describe">
+								<input type="checkbox" name="category1" id="category8"><label class="describes-label" for="category8"><span class="describes-padding">Category 8</span></label>
+								<a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="lorem"><i class="icon-ib-info"></i></a>
+							</div>
+						</div>
+					</div>
+
+	<!---------------- Investor ID ------------>
+					<div class="row">
+							<div class="col-md-12">
+								<label class="investor-id">Investor ID</label>
+								<input class="form-control" name="investor-id" id="investor-id" placeholder="2a86e4085a59" type="text" disabled/>
+							</div>
+					</div>
+
+
+	<!---------------- Project attributes ------------>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="project-attributes">Project attributes</p>
+						</div>
+					</div>
+					<div class="row">
+							<div class="col-md-12">
+								<p class="description">Description</p>
+							</div>
+						</div>
+
+
+	<!---------------- Text area ------------------->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="summernote"></div>
+						</div>
+					</div>
+					<div class="row" id="character-info">
+							<div class="col-6 col-md-6" id="min-max">
+								<p class="min-max-char">Minimum 300 characters. Maximum 500 characters.</p>
+							</div>
+							<div class="col-6 col-md-6">
+									<div id="charNum">
+										<p class="charNum"><span id="maxContentPost">0</span>/500</p>
+									</div>
+							</div>
+					</div>
+
+
+
+	<!-------------------- Start End --------------->
+					<div class="row" id="start-end">
+							<div class="col-md-6">
+								<label class="start">Start</label>
+								<input class="form-control" name="start" id="start" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+							</div>
+							<div class="col-md-6">
+								<label class="end">End</label>
+								<input class="form-control" name="end" id="end" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+							</div>
+					</div>
+
+
+	<!---------------- Financial data / Budget------------>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="financial-data">Financial data</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label class="budget" for="budget">Budget</label>
+							<div class="input-group">
+								<input type="text" class="form-control" id="budget" aria-label="Text input with dropdown button">
+								<div class="input-group-append">
+									<div class="custom-select1">
+										<select>
+											<option id="options" value="0"></option>
+											<option id="options" value="1" selected>&euro; EUR</option>
+											<option id="options" value="2">$ USD</option>
+											<option id="options" value="3">CHF</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+<!---------------- Previous / Next Step Button ------------>
+					<div class="previous-next-row">
+						<button class="button-next-step" type="submit">Next Step</button>
+						<button class="button-previous-step" type="">Previous Step</button>
+						<button class="button-skip-step" type="">Skip</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<!------------------footer----------------------->
+<div class="fluid-container">
+		<footer>
+			<hr id="hr-footer">
+			<ul>
+				<li><a href="#">User Agreement</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Community Guidelines</a></li>
+				<li><a href="#">Cookie Policy</a></li>
+				<li><a href="#">Copyright Policy </a></li>
+				<li><a href="#">2019 iBridge</a></li>
+			</ul>
+		</footer>
+	</div>
+	<!-- POPOVER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<!-- SUMMERNOTE -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+	<script type="text/javascript">  
+		/* Popover initiate */
+        $(document).ready(function () {  
+            $('[data-toggle="popover"]').popover();  
+        });  
+		/* remove popover redirection on click */
+		$( ".describe a" ).on( "click", function(e) {
+			e.preventDefault();
+		});
+
+		  
+		
+		function registerSummernote(element, placeholder, max, callbackMax) {
+			$(element).summernote({
+				height:138,
+				disableDragAndDrop: true,
+				toolbar: [
+					['style', ['bold', 'italic', 'underline']],
+					['para', ['ol','ul']]
+				],
+				placeholder,
+				popover: {
+					image: [],
+					link: [],
+					air: []
+				},
+				callbacks: {
+				
+					onKeydown: function(e) {
+					var t = e.currentTarget.innerText;
+						if (t.trim().length >= max) {
+							//delete key
+							if (e.keyCode != 8)
+								e.preventDefault();
+								// add other keys ...
+						}
+					},
+					onKeyup: function(e) {
+						var t = e.currentTarget.innerText;
+						if (typeof callbackMax == 'function') {
+							callbackMax(t.trim().length);
+						}
+					},
+					onPaste: function(e) {
+						var t = e.currentTarget.innerText;
+						var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+						e.preventDefault();
+						var all = t + bufferText;
+						document.execCommand('insertText', false, all.trim().substring(0, 500));
+						if (typeof callbackMax == 'function') {
+							callbackMax(max - t.length);
+						}
+					}
+				}
+				
+			});
+		}
+		/* get html content from summernote */
+		var markupStr = $('#summernote').summernote('code');
+		/* dispaly char-count */
+		$(function(){
+			registerSummernote('.summernote', '', 500, function(max) {
+				$('#maxContentPost').text(max)
+			});
+		});
+
+	</script>  
+		<script>
+				var x, i, j, selElmnt, a, b, c;
+				/*look for any elements with the class "custom-select":*/
+				x = document.getElementsByClassName("custom-select1");
+				for (i = 0; i < x.length; i++) {
+				  selElmnt = x[i].getElementsByTagName("select")[0];
+				  /*for each element, create a new DIV that will act as the selected item:*/
+				  a = document.createElement("DIV");
+				  a.setAttribute("class", "select-selected");
+				  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+				  x[i].appendChild(a);
+				  /*for each element, create a new DIV that will contain the option id="options" list:*/
+				  b = document.createElement("DIV");
+				  b.setAttribute("class", "select-items select-hide");
+				  for (j = 1; j < selElmnt.length; j++) {
+					/*for each option id="options" in the original select element,
+					create a new DIV that will act as an option id="options" item:*/
+					c = document.createElement("DIV");
+					c.innerHTML = selElmnt.options[j].innerHTML;
+					c.addEventListener("click", function(e) {
+						/*when an item is clicked, update the original select box,
+						and the selected item:*/
+						var y, i, k, s, h;
+						s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+						h = this.parentNode.previousSibling;
+						for (i = 0; i < s.length; i++) {
+						  if (s.options[i].innerHTML == this.innerHTML) {
+							s.selectedIndex = i;
+							h.innerHTML = this.innerHTML;
+							y = this.parentNode.getElementsByClassName("same-as-selected");
+							for (k = 0; k < y.length; k++) {
+							  y[k].removeAttribute("class");
+							}
+							this.setAttribute("class", "same-as-selected");
+							break;
+						  }
+						}
+						h.click();
+					});
+					b.appendChild(c);
+				  }
+				  x[i].appendChild(b);
+				  a.addEventListener("click", function(e) {
+					  /*when the select box is clicked, close any other select boxes,
+					  and open/close the current select box:*/
+					  e.stopPropagation();
+					  closeAllSelect(this);
+					  this.nextSibling.classList.toggle("select-hide");
+					  this.classList.toggle("select-arrow");
+					});
+				}
+				function closeAllSelect(elmnt) {
+				  /*a function that will close all select boxes in the document,
+				  except the current select box:*/
+				  var x, y, i, arrNo = [];
+				  x = document.getElementsByClassName("select-items");
+				  y = document.getElementsByClassName("select-selected");
+				  for (i = 0; i < y.length; i++) {
+					if (elmnt == y[i]) {
+					  arrNo.push(i)
+					} else {
+					  y[i].classList.remove("select-arrow");
+					}
+				  }
+				  for (i = 0; i < x.length; i++) {
+					if (arrNo.indexOf(i)) {
+					  x[i].classList.add("select-hide");
+					}
+				  }
+				}
+				/*if the user clicks anywhere outside the select box,
+				then close all select boxes:*/
+				document.addEventListener("click", closeAllSelect);
+				
+				
+				$(document).ready(function () {  
+					$('[data-toggle="popover"]').popover();  
+				});  
+				$( ".describe a" ).on( "click", function(e) {
+					e.preventDefault();
+				});
+
+	</script>
+</body>
+</html>

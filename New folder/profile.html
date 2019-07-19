@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iBridge Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+	<!---------------header-------------->
+	<header>
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<span class="logo align-middle">LOGO</span>
+					</div>
+					<div class="col-6">
+						<span class="user">
+							<a href="#" class="align-middle"><i class="icon-ib-search"></i></a>
+							<a href="#" class="align-middle"><i class="icon-ib-notifications"></i></a>
+							<a href="#" class="align-middle"><i class="icon-ib-chat"></i></a>
+							<span class="vertical-line align-middle"></span>
+							<a href="#" class="align-middle">John</a>
+							<a href="#"><img src="images/imgg.jpg" class="profile-icon"></a>
+							<a href="#"><i class="icon-ib-arrow-down"></i></a>
+							<a href="#"><i class="icon-ib-menu" id="menu-icon"></i></a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>	
+	<div class="container-fluid" id="container-fluid">
+		<div class="background-photo">
+				<img src="images/img@3x.png" class="header-image">
+				<img src="images/overlay@3x.png" class="overlay-image">
+		</div>
+	</div>
+	<div class="profile-content">
+	<div class="container">
+		<div class="row" id="container-profile">
+			<div class="col-md-auto" id="profile-photo-container">
+				<img src="images/img@2x.png" class="profile-photo">
+			</div>
+			<div class="col-md align-self-end" id="name-and-profession">
+				<p class="name">John Doe</p>
+				<p class="profession">PhD. Graphic Designer</p>
+			</div>
+			<div class="col-md-auto align-self-end" id="job-and-education">
+				<p><i class="icon-ib-jobs"></i>Graphic Designer<span class="vertical-line"></span></p>
+				<p><i class="icon-ib-university"></i>Harvard University "Designer Degree"<span class="vertical-line"></span></p>
+				<p><i class="icon-ib-followers"></i>184 Followers</p>
+			</div>
+		</div>
+		<div class="mobile-show">
+			<button class="edit-profile-button" type="submit" onclick="window.location.href='#'">Edit Profile</button>
+			<p class="info">Lorem ipsum dolor sit amet, sed in eligendi honestatis persequeris, eu his viderer quaeque diceret. <span id="dots">...</span><span id="more">Blandit eloquentiam vis ut, ex munere patrioque mnesarchum eos, no vero interesset vix. </span></p><button id="btn-overflow" onclick="showText()">More</button>
+		</div>
+	</div>
+		<div id="profile-nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6" id="profile-menu">
+						<span><a href="#">Overview</a></span>
+						<span><a href="#">Impact</a></span>
+						<span><a href="#">Publications</a></span>
+					</div>
+					<div class="col-md-6">	
+						<div class="desktop-show">
+						<span class="edit-and-more-buttons">
+							<button class="edit-profile-button" type="submit" onclick="window.location.href='#'">Edit Profile</button>
+							<button class="more-button"><i class="icon-ib-more"></i></button>
+						</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="container">
+		<div class="row"id="overview">
+			<div class="col-md-8">
+				<p class="titles">Editorships<button><i class="icon-ib-plus"></i>ADD</button></p>
+				<div id="editorships">
+					<div class="editorships-left">
+						<p class="editorships-title">Discere dolorem ad eum</p>
+						<p class="info">Energy Impact</p>
+					</div>
+					<div class="editorships-right">
+						<p class="info" id="editorships-years">2010-2019</p>
+						<p class="info">(9 years)</p>
+					</div>
+				</div>
+				<p class="titles">Recent publications<button><i class="icon-ib-plus"></i>ADD</button></p>
+				<div id="publications">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<i class="icon-ib-files"></i>
+							<p class="info">Import your publications from Scopus</p>
+						</div>
+						<div class="col-md-6 text-center" id="upload-icon">
+							<i class="icon-ib-upload"></i>
+							<p class="info">Upload a publication</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<hr>
+							<p class="info" id="not-published"><a href="#">I have not published yet</a></p>
+						</div>
+					</div>
+				</div>
+				<p class="titles">Professional experience<button><i class="icon-ib-plus"></i>ADD</button></p>
+				<div id="experience">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<i class="icon-ib-jobs"></i>
+							<p class="info"><a href="#">Add your professional experience</a><br>
+							to share where you have been working</p>
+						</div>
+					</div>
+				</div>
+				<p class="titles">Education<button><i class="icon-ib-plus"></i>ADD</button></p>
+				<div id="education">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<i class="icon-ib-read"></i>
+							<p class="info"><a href="#">Add your education</a><br>
+							to show where you have completed your studies</p>
+						</div>
+					</div>
+				</div>
+				<p class="titles">Research interests<button><i class="icon-ib-plus"></i>ADD</button></p>
+				<div id="interests">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<i class="icon-ib-idea"></i>
+							<p class="info"><a href="#">Add your research interests</a><br>
+							to show what you are passionate about</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4" id="right-content">
+				<div class="desktop-show">
+				<p class="titles">About me</p>
+				<p class="info">Lorem ipsum dolor sit amet, sed in eligendi honestatis persequeris, eu his viderer quaeque diceret. Blandit eloquentiam vis ut, ex munere patrioque mnesarchum eos, no vero interesset vix. </p>
+				</div>
+				<p class="titles">Groups</p>
+				<p class="info"><a href="#">Join a public group <br></a>to follow discussion in your niche</p>
+
+				<p class="titles">Other IDs</p>
+				<p class="info">ORCID</p>
+				<a href="#">Create of connect your ORCID ID</a>
+				<p class="info">Scopus</p>
+				<a href="#">Connect your Scopus author ID</a>
+			</div>
+		</div>
+	</div>
+	</div>
+		<!------------------footer----------------------->
+		<footer>
+			<hr id="footer-hr">
+			<div id="fluid-footer">
+				<div class="container" id="container-footer">
+					<div class="row">
+						<div class="offset-md-2 col-md-8">
+								<p class="foot-content ">
+									<a href="#">User&nbsp;Agreement</a>
+									<a href="#">Privacy&nbsp;Policy</a>
+									<a href="#">Community&nbsp;Guidelines</a>
+									<a href="#">Cookie&nbsp;Policy</a>
+									<a href="#">Copyright&nbsp;Policy</a>
+								<span class="copyright">iBridge&nbsp;&copy;&nbsp;
+								<script type="text/javascript">document.write(new Date().getFullYear());</script>
+								</span>
+								</p>
+						</div>
+					</div>  
+				</div>
+			</div>
+		</footer>
+	<script>
+/*funktion showText shows more text at .mobile-show div when clicked the More button and then less text when clicked Less.*/
+function showText() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("btn-overflow");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "More"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Icons/ibridge-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <title>Sign in iBridge</title>
+    <link href="/Content/css?v=DMjnMD8k3OCYi0bVQv-MoMsLbMXTyzNOwMvcSuA1fPw1" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row color-row">
+        <div class="col-xl-8 color">
+            
+        </div>
+        <div class="col-xl-4"></div>
+    </div>
+</div>
+    <div class="container" id="container-login">
+        <div class="row">
+            <div class="col-xl-7 left-panel">
+                <div class="vertical-middle">
+                    <h4>iBridge</h4>
+                    <h1>Growth opportunities in professional way. </br> Stay connect</h1>
+                </div>
+                <div class="vertical-bottom">
+                    <footer>
+                        <hr id="hr-footer">
+                        <ul>
+                            <li><a href="#">User Agreement</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Copyright Policy </a></li>
+                            <li><a href="#">2019 iBridge</a></li>
+                    </footer>
+                </div>
+            </div>
+            <div class="col-xl-5 right-panel">
+                <div class="right-form">
+                    <section id="loginForm">
+                        <form action="post" class="form-horizontal" method="post" role="form">
+                            <input name="__RequestVerificationToken" type="hidden" value="rn4ZQJ_FlD36zpzhX_jgJmA19rrQL3a7OgNHlG6kmpTsfOMCcHQz7OnFjbofU1kT7qnRbWhoq7RvhHBHItWemRjy164LnLztyoisIYAti6oeTOzVix7lE9yncX-BIsXAYKIaQ6OWUrVzE0iEjNxQJQ2" />                            
+                            <h4>Sign in</h4>
+                            <p class="register-link">
+                                or <a href="/Account/Register">Create an account</a>
+                            </p>
+                            <div class="form-group">
+                                <div class="col-md-12 input">
+                                    <input class="inputText" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" type="text" value="" />
+                                    <span class="floating-label">Email address</span>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 input">
+                                    <input class="inputText" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
+                                    <span class="floating-label">Password</span>
+                                    <a class="show-link" onclick="showPassword1()">Show</a>
+                                </div>
+                            </div>
+                            <p class="forgot-link">
+                                <a href="/Account/ForgotPassword?class=forget-password">Forgot your password?</a>
+                            </p>
+                            <div class="form-group">
+                                <input type="submit" value="Sign in" class="btn btn-default" />
+                            </div>
+                        </form>
+                        <p>Or</p>
+                        <div class="external-login col-xl-offset-1 col-xl-10">
+                            <a href="#"><img class="linkedin" src="linkedin_icon.svg"> Continue with Linkedin</a>
+                            <a href="#"><img class="facebook" src="facebook_icon.svg">Continue with Facebook</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fluid-container" id="container-footer">
+        <footer>
+            <hr id="hr-footer">
+            <ul>
+                <li><a href="#">User Agreement</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Community Guidelines</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Copyright Policy </a></li>
+                <li><a href="#">2019 iBridge</a></li>
+            </ul>
+        </footer>
+    </div>
+           
+    </div>
+    <script>
+    function showPassword1() {
+        var n = $("#Password");
+        n.attr("type") === "password" ? n.attr("type", "text") : n.attr("type", "password")
+    }
+    $(".inputText").focusout(function() {
+        var n = $(this).val();
+        n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
+    });
+    </script>
+
+    <script src="/bundles/jquery?v=2u0aRenDpYxArEyILB59ETSCA2cfQkSMlxb6jbMBqf81"></script>
+
+    <script src="/bundles/bootstrap?v=lescQEuG5u4jd-GcVDBcbpUOSyTDIg0Kk9zHDX55GCw1"></script>
+
+    <script src="/bundles/site?v=fKtjeofAphY3YYVRHMa3RJPcYfCU-aV4IyihqwOvce41"></script>
+
+    
+        <script src="/bundles/jqueryval?v=x63JhYAtPoWfuvvzOG4ie0IbeC8KtI5Q_Ln6iJWChUE1"></script>
+
+    
+
+</body>
+</html>
