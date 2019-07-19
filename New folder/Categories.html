@@ -20,12 +20,64 @@
 						<a href="#" class="align-middle">John</a>
 						<a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i></a>
 						<a href="#" class="arrow-icon align-middle"><i class="icon-ib-arrow-down"></i></a>
-						<a href="#"><i class="icon-ib-menu" id="menu-icon"></i></a>
+						<button id="menu-icon">
+							<i class="icon-ib-menu"></i>
+						</button>
 					</span>
 				</div>
 			</div>
 		</div>
 	</header>	
+	<nav id="sidebar">
+		<div>
+			<button id="close-icon"><i class="icon-ib-close"></i></button>
+		<div>
+		<div>
+			<ul class="list-unstyled components">
+				<li><a href="#">
+		                <div class="wrap-left">
+		                    <i class="icon-ib-profile" id="icon-profile-sidebar"></i>
+		                </div>
+	                	<div class="wrap-middle">
+		                    <span class="sidebar-p">John Doe</span>
+		                    <span class="sidebar-p">View profile</span>
+	                	</div>
+	                	<div class="wrap-right">
+	                		<i class="icon-ib-arrow-next"></i>
+	                	</div>                
+	            	</a>
+	            </li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+				<li><p class="sidebar-p">Help and Settings</p></li>
+
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Settings</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Help</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Terms & Policies</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Report a Problem</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Sign out</a></li>
+				<li><p class="sidebar-p">iBridge &copy; 2019</p></li>			<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+				<li><p class="sidebar-p">Help and Settings</p></li>
+
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Settings</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Help</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Terms & Policies</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Report a Problem</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Sign out</a></li>
+				<li><p class="sidebar-p">iBridge &copy; 2019</p></li>			<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+				<li><p class="sidebar-p">Help and Settings</p></li>
+
+			</ul>
+		</div>
+	</nav>
 <!----------set up profile----------->
   	<div class="container" id="container">
 		<div class="row">
@@ -161,59 +213,88 @@
 				</ul>
 			</footer>
 		</div>	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 	<script type="text/javascript">
+
 /**** Background change when radio button is clicked */
-	$(document).ready(function() {
-    $('.category').click(function() {
-        $('.category').removeClass('background');
-        $(this).addClass('background');
-    });
 
-	$('.subcategory').click(function() {	
-        $('.subcategory').removeClass('background');
-        $(this).addClass('background');
-    });
-});
+		$(document).ready(function() {
+	    $('.category').click(function() {
+	        $('.category').removeClass('background');
+	        $(this).addClass('background');
+	    });
+
+		$('.subcategory').click(function() {	
+	        $('.subcategory').removeClass('background');
+	        $(this).addClass('background');
+	    });
+	});
+
+
 /*****Hide All subcategories and show the Paragraph when clicked on Categories*****/
-	$(document).ready(function(){
-	$("#subcategory1").hide();
-	$("#subcategory2").hide();
-	$("#subcategory3").hide();
-	$("#subcategory4").hide();
-	$(".category").click(function(){
-    $(".and-subcategory-is").show();
-    });
-});
+
+		$(document).ready(function(){
+			$("#subcategory1").hide();
+			$("#subcategory2").hide();
+			$("#subcategory3").hide();
+			$("#subcategory4").hide();
+			$(".category").click(function(){
+		    $(".and-subcategory-is").show();
+		    });
+	});
+
 /***Show and Hide Subcategory***/
-	$(document).ready(function(){
-    $("#category1").click(function(){
-       $("#subcategory1").show();
-       $("#subcategory2").hide();
-       $("#subcategory3").hide();
-       $("#subcategory4").hide();  
-     });
 
-    $("#category2").click(function(){
-    	$("#subcategory2").show()
-       $("#subcategory1").hide();
-       $("#subcategory3").hide();
-       $("#subcategory4").hide();
-    });
+		$(document).ready(function(){
+	    $("#category1").click(function(){
+	       $("#subcategory1").show();
+	       $("#subcategory2").hide();
+	       $("#subcategory3").hide();
+	       $("#subcategory4").hide();  
+	     });
 
-    $("#category3").click(function(){
-        $("#subcategory3").show();
-       $("#subcategory2").hide();
-       $("#subcategory1").hide();
-       $("#subcategory4").hide();
-    });
+	    $("#category2").click(function(){
+	    	$("#subcategory2").show()
+	       $("#subcategory1").hide();
+	       $("#subcategory3").hide();
+	       $("#subcategory4").hide();
+	    });
 
-    $("#category4").click(function(){
-        $("#subcategory4").show();
-       $("#subcategory2").hide();
-       $("#subcategory3").hide();
-       $("#subcategory1").hide();
-    });
-});
-</script>
+	    $("#category3").click(function(){
+	        $("#subcategory3").show();
+	       $("#subcategory2").hide();
+	       $("#subcategory1").hide();
+	       $("#subcategory4").hide();
+	    });
+
+	    $("#category4").click(function(){
+	        $("#subcategory4").show();
+	       $("#subcategory2").hide();
+	       $("#subcategory3").hide();
+	       $("#subcategory1").hide();
+	    });
+	});
+		
+	</script> 
+     <script type="text/javascript">
+       $(document).ready(function () {
+           $('#menu-icon').on('click', function () {
+               $('#sidebar').addClass('active');
+               $('footer').addClass('open');
+               $('#container').addClass('open');
+               $('.logo').addClass('open');
+           });
+       });
+       $(document).ready(function () {
+           $("#close-icon").on('click', function(){
+               $('#sidebar').removeClass('active');
+               $('footer').removeClass('open');
+               $('#container').removeClass('open');
+               $('.logo').removeClass('open');
+           });
+       });
+   </script>  
 </body>
 </html>

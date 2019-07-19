@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!-- FONT ICON -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FONT ICON -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
     <style type="text/css">
 
     </style>
 </head>
 <body>
     <header>
-		<div class="container">
-			<div class="row">
-				<div class="col-6">
-					<span class="logo align-middle">LOGO</span>
-				</div>
-				<div class="col-6">
-					<span class="user">
-						<a href="#" class="align-middle">John</a>
-						<a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i></a>
-						<a href="#" class="arrow-icon align-middle"><i class="icon-ib-arrow-down"></i></a>
-						<a href="#"><i class="icon-ib-menu" id="menu-icon"></i></a>
-					</span>
-				</div>
-			</div>
-		</div>
-	</header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <span class="logo align-middle">LOGO</span>
+                </div>
+                <div class="col-6">
+                    <span class="user">
+                        <a href="#" class="align-middle">John</a>
+                        <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i></a>
+                        <a href="#" class="arrow-icon align-middle"><i class="icon-ib-arrow-down"></i></a>
+                        <button id="menu-icon"><i class="icon-ib-menu"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="sidebar">
+        <div>
+            <button id="close-icon"><i class="icon-ib-close"></i></button>
+        </div>
+        <div>
+            <ul class="list-unstyled components">
+                <p class="continue">Continue on iBridge with sign in or create new account.</p>
+                <li class="button1"><button class="sign-in">Sign in</button></li>
+                <li class="button2"><button class="create-acc">Create an account</button></li>
+            </ul>
+        </div>
+        
+    </nav>
     <div class="container" id="container">
         <div class="row">
             <div class="offset-md-2 col-md-8 offset-xl-3 col-xl-5">
@@ -39,15 +52,15 @@
                         <p class="recieve-email-text">Didn&apos;t received a verification email, you may resend the email
                             by clicking on the button below.</p>
                         <button type="submit" class="resend-link">Resend verification email</button>
-                        <p class="enter-email-text extra-margin">If you don&apos;t see the email, please also check junk/spam folder.</p>
+                        <p class="enter-email-text">If you don&apos;t see the email, please also check junk/spam folder.</p>
                 </form>
             </div>
         </div>
     </div>
 
 
-	<!------------------footer----------------------->
-	<div class="fluid-container">
+    <!------------------footer----------------------->
+    <div class="fluid-container">
             <footer>
                 <hr id="hr-footer">
                 <ul>
@@ -59,6 +72,21 @@
                     <li><a href="#">2019 iBridge</a></li>
                 </ul>
             </footer>
-        </div>	
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#menu-icon').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+                $('footer').toggleClass('open');
+                $('#container').toggleClass('open');
+                $('.logo').toggleClass('open');
+                $('#menu-icon').toggleClass('open-user');
+                $(this).find("i").toggleClass("icon-ib-close");     
+
+            });
+        });
+    </script>   
 </body>
 </html>
