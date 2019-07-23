@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+/*----------------------------------
+	Success email verification
+----------------------------------*/
+#success-icon{
+	color: #34a406;
+	border-radius: 50%;
+	font-size: 11px;
+	border: 1.5px solid #34a406;
+	padding:4px;
+	font-weight: bolder;
+	margin-right: 30px;
+}
+#success-popup{
+	border-radius: 5px;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+	left:0;
+    right:0;
+    margin: auto;
+	padding: 15px 30px;
+	max-width:71.06%;
+	position: absolute;
+	margin-top:35px;
+	z-index: 1;
+	background-color: #fff;
+	width: 100%;/*to center div on Internet Explorer*/
+}
+.success{
+	font-family: "HelveticaNeue-Bold";
+	font-size: 18px;
+}
+#success-popup span{
+	display: inline-block;
+}
+#success-popup .wrap-right, #success-popup .wrap-left{
+	margin-top: 10px;
+}
+#success-popup .wrap-right i{
+	color: rgba(6, 6, 9, 0.4);
+}
+/*to hide div when X button is clicked*/
+.hide-success{
+	display: none;
+}
+.success-confirmed{
+	color: #060609;
+	opacity: 0.5;
+	font-size: 14px;
+}
+.wrap-left{
+	float: left;
+}
+.wrap-middle span{
+	display: block;
+	line-height: 1.4;
+}
+.wrap-middle{
+	float: left;
+}
+.wrap-right{
+	float: right;
+}
+	</style>
+</head>
+<body>	
+	<div class="container" id="container">
+		<div class="row">
+			<div class=" col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+				<div id="success-popup">
+					<div class="wrap-left">
+						<i class="icon-ib-check" id="success-icon"></i>
+					</div>
+					<div class="wrap-middle">
+						<span class="success">Success</span><br>
+						<span class="success-confirmed">Your email address has successfully confirmed.</span>
+					</div>
+					<div class="wrap-right">
+						<i class="icon-ib-close" id="close-popup-icon"></i>
+					</div>	                
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Hide success PopUp(success email verification) when clicked the close button (X) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   	<script type="text/javascript">
+   		$(document).ready(function() {
+   			$('#close-popup-icon').on('click', function(){
+   			$('#success-popup').addClass('hide-success');
+   		});
+   	});
+   	</script>
+</body>
+</html>
