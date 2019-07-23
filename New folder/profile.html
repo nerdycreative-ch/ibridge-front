@@ -24,12 +24,64 @@
 						<a href="#" class="align-middle">John</a>
 						<a href="#"><img src="images/imgg.jpg" class="profile-icon"></a>
 						<a href="#"><i class="icon-ib-arrow-down"></i></a>
-						<a href="#"><i class="icon-ib-menu" id="menu-icon"></i></a>
+						<button id="menu-icon">
+							<i class="icon-ib-menu"></i>
+						</button>
 					</span>
 				</div>
 			</div>
 		</div>
-	</header>	
+	</header>
+	<nav id="sidebar">
+		<div>
+			<button id="close-icon"><i class="icon-ib-close"></i></button>
+		<div>
+		<div>
+			<ul class="list-unstyled components">
+				<li><a href="#">
+		                <div class="wrap-left">
+		                    <i class="icon-ib-profile" id="icon-profile-sidebar"></i>
+		                </div>
+	                	<div class="wrap-middle">
+		                    <span class="sidebar-p">John Doe</span>
+		                    <span class="sidebar-p">View profile</span>
+	                	</div>
+	                	<div class="wrap-right">
+	                		<i class="icon-ib-arrow-next"></i>
+	                	</div>                
+	            	</a>
+	            </li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+				<li><p class="sidebar-p">Help and Settings</p></li>
+
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Settings</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Help</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Terms & Policies</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Report a Problem</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Sign out</a></li>
+				<li><p class="sidebar-p">iBridge &copy; 2019</p></li>			<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+				<li><p class="sidebar-p">Help and Settings</p></li>
+
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Settings</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Help</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Terms & Policies</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Report a Problem</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Sign out</a></li>
+				<li><p class="sidebar-p">iBridge &copy; 2019</p></li>			<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+				<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+				<li><p class="sidebar-p">Help and Settings</p></li>
+
+			</ul>
+		</div>
+	</nav>	
 	<div class="container-fluid" id="container-fluid">
 		<div class="background-photo">
 				<!-- <img src="images/img@3x.png" class="header-image"> -->
@@ -189,5 +241,25 @@ function showText() {
   }
 }
 </script>
+     <script type="text/javascript">
+       $(document).ready(function () {
+           $('#menu-icon').on('click', function () {
+               $('#sidebar').addClass('active');
+               $('#container-fluid').addClass('open');
+               $('.logo').addClass('open');
+               $('.profile-content').addClass('open');
+               $('footer').addClass('open');
+           });
+       });
+       $(document).ready(function () {
+           $("#close-icon").on('click', function(){
+               $('#sidebar').removeClass('active');
+               $('#container-fluid').removeClass('open');
+               $('.logo').removeClass('open');
+               $('.profile-content').removeClass('open');
+               $('footer').removeClass('open');
+           });
+       });
+   </script> 
 </body>
 </html>
