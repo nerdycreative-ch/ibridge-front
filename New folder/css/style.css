@@ -615,7 +615,8 @@ button {
 #subcategory1 div.col-md-auto,
 #subcategory2 div.col-md-auto,
 #subcategory3 div.col-md-auto,
-#subcategory4 div.col-md-auto{
+#subcategory4 div.col-md-auto,
+#subcategory5 div.col-md-auto{
 	margin-right: -15px;
 
 }
