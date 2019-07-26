@@ -1960,7 +1960,8 @@ input::-webkit-clear-button {
     background: #6d7fcc;
 }
 #close-icon{
-	top: 17px;
+	top: 20px;
+	font-size: 16px;
     margin-left:calc(100% - 108%)!important;
     position: fixed;
 }
@@ -2025,6 +2026,7 @@ input::-webkit-clear-button {
 #sidebar ul li.button1{
 	margin-bottom: 30px;
 }
+/*arrow next icon*/
 #sidebar ul li a .wrap-right i{
 	color: #fff;
 	font-size: 10px;
@@ -2041,9 +2043,15 @@ input::-webkit-clear-button {
         display: inline-block;
     }
 	.open{
-		margin-left: calc(100% - 146%)!important;
+		margin-left: calc(100% - 145%)!important;
 		margin-right: 50%;
 	}
+}
+@media screen and (min-width: 768px)
+{		/*arrow next icon*/
+	#sidebar ul li a .wrap-right i{
+		margin-right: -15px;
+		}
 }
 /*calc(100% - 146%) doesn't work well on Edge*/
 
@@ -2080,8 +2088,9 @@ input::-webkit-clear-button {
 @media screen and (max-width: 414px){
 	.open{
 		margin-left: calc(100% - 180%)!important;
+		margin-right: 80%;
 	}
 	#close-icon{
-		margin-left: calc(100% - 113%)!important;
+		margin-left: calc(100% - 112.5%)!important;
 	}
 }
