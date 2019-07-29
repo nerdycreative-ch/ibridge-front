@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+</head>
+<body>
+<!---------------header-------------->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<span class="logo align-middle">LOGO</span>
+				</div>
+				<div class="col-6">
+					<span class="user">
+						<a href="#" class="align-middle">John</a>
+						<a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i></a>
+						<a href="#" class="arrow-icon align-middle"><i class="icon-ib-arrow-down"></i></a>
+						<button id="menu-icon">
+							<i class="icon-ib-menu"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- right menu on tablet and smaller devices -->
+		<nav id="sidebar">
+			<div>
+				<button id="close-icon"><i class="icon-ib-close"></i></button>
+			<div>
+			<div>
+				<ul class="list-unstyled components">
+					<li><a href="#">
+			                <div class="wrap-left">
+			                    <i class="icon-ib-profile" id="icon-profile-sidebar"></i>
+			                </div>
+		                	<div class="wrap-middle">
+			                    <span class="sidebar-p">John Doe</span>
+			                    <span class="sidebar-p">View profile</span>
+		                	</div>
+		                	<div class="wrap-right">
+		                		<i class="icon-ib-arrow-next"></i>
+		                	</div>                
+		            	</a>
+		            </li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+					<li><p class="sidebar-p">Help and Settings</p></li>
+
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Settings</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Help</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Terms & Policies</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Report a Problem</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Sign out</a></li>
+					<li><p class="sidebar-p">iBridge &copy; 2019</p></li>			<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+					<li><p class="sidebar-p">Help and Settings</p></li>
+
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Settings</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Help</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Terms & Policies</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Report a Problem</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Sign out</a></li>
+					<li><p class="sidebar-p">iBridge &copy; 2019</p></li>			<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+					<li><a href="#"><i class="icon-ib-profile" id="icon-profile-sidebar"></i>Menu 1</a></li>
+
+					<li><p class="sidebar-p">Help and Settings</p></li>
+
+				</ul>
+			</div>
+		</nav>
+		<div class="container" id="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+					<div class="" id="steps-skip-row">
+						<svg viewBox="0 0 36 36" class="circular-chart blue">
+							<path class="circle-bg" d="M18 2.0845 
+													a 15.9155 15.9155 0 0 1 0 31.831
+													a 15.9155 15.9155 0 0 1 0 -31.831"/>
+							<path class="circle-step3" stroke-dasharray="75, 100" d="M18 2.0845
+													a 15.9155 15.9155 0 0 1 0 31.831
+													a 15.9155 15.9155 0 0 1 0 -31.831"/>
+						</svg>
+						<p class="steps">Setup guide: 3 of 4 steps complete</p>
+					</div>
+					<p class="step-name">Choose Interests & Knowledge</p>
+					<hr id="header-hr">
+					<p class="main-info">Main Information</p>
+					<!---------------- Main Information ------------>
+				<form action="#" method="POST">
+					<div class="row">
+							<div class="col-md-12">
+								<label class="interests-name">Interests</label>
+								<input class="form-control" name="interests-name" id="interests-name" type="text" onclick="toggle();"/>
+							</div>
+					</div>
+
+				<div id="tab-content">
+					<input type="text" class="form-control" id="tab-text" placeholder="Type keyword or choose from options below">
+					<hr>
+					<div class="row">
+					  	<div class="col-lg-4"> 
+						    <nav class="nav flex-column">
+								  <a class="nav-link" href="#" id="main-list1">Scientific Disciplines</a>
+								  <a class="nav-link" href="#" id="main-list2">Industrials Sectors</a>
+							</nav>
+					    </div>
+					
+						<div class="col-lg-8">
+					   
+	      						<ul id="first-list1">
+									<li id="first-list-item">
+										<button><i class="icon-ib-plus"></i></button>
+										<input type="checkbox" name="interest1" id="interest1"><label class="describes-label" for="interest1"><span class="describes-padding">1</span></label><a href="#"></a>
+									</li>
+
+										<ul id="second-list">
+											<li>
+												<button><i class="icon-ib-plus"></i></button>
+												<input type="checkbox" name="interest1-1" id="interest1-1"><label class="describes-label" for="interest1-1"><span class="describes-padding">2</span></label><a href="#"></a>
+											</li>
+											<li>
+												<button><i class="icon-ib-plus"></i></button>
+												<input type="checkbox" name="interest1-2" id="interest1-2"><label class="describes-label" for="interest1-2"><span class="describes-padding">Information Processing & Systems, Workflow</span></label><a href="#"></a>
+											</li>
+												<ul id="third-list">														
+													<li>
+														<input type="checkbox" name="interest1-2-1" id="interest1-2-1"><label class="describes-label" for="interest1-2-1"><span class="describes-padding">Advanced Systems Architectures</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-2" id="interest1-2-2"><label class="describes-label" for="interest1-2-2"><span class="describes-padding">Artificial Intelligence (AI)</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-3" id="interest1-2-3"><label class="describes-label" for="interest1-2-3"><span class="describes-padding">Computer Games</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-4" id="interest1-2-4"><label class="describes-label" for="interest1-2-4"><span class="describes-padding">Computer Hardware</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-5" id="interest1-2-5"><label class="describes-label" for="interest1-2-5"><span class="describes-padding">Computer Technology/Graphics, Meta Computing</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-6" id="interest1-2-6"><label class="describes-label" for="interest1-2-6"><span class="describes-padding">Simulation</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-7" id="interest1-2-7"><label class="describes-label" for="interest1-2-7"><span class="describes-padding">User Interface, Usability</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-8" id="interest1-2-8"><label class="describes-label" for="interest1-2-8"><span class="describes-padding">Electronis, Microelectronics</span></label><a href="#"></a>
+													</li>
+												</ul>
+										</ul>
+								</ul>
+								<ul id="first-list2">
+									<li id="first-list-item">
+										<button><i class="icon-ib-plus"></i></button>
+										<input type="checkbox" name="interest1" id="interest1"><label class="describes-label" for="interest1"><span class="describes-padding">Electrsonics, IT & Telecomms</span></label><a href="#"></a>
+									</li>
+
+										<ul id="second-list">
+											<li>
+												<button><i class="icon-ib-plus"></i></button>
+												<input type="checkbox" name="interest1-1" id="interest1-1"><label class="describes-label" for="interest1-1"><span class="describes-padding">Electronis, Microelectronics</span></label><a href="#"></a>
+											</li>
+											<li>
+												<button><i class="icon-ib-plus"></i></button>
+												<input type="checkbox" name="interest1-2" id="interest1-2"><label class="describes-label" for="interest1-2"><span class="describes-padding">Information Processing & Systems, Workflow</span></label><a href="#"></a>
+											</li>
+												<ul id="third-list">														
+													<li>
+														<input type="checkbox" name="interest1-2-1" id="interest1-2-1"><label class="describes-label" for="interest1-2-1"><span class="describes-padding">Advanced Systems Architectures</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-2" id="interest1-2-2"><label class="describes-label" for="interest1-2-2"><span class="describes-padding">Artificial Intelligence (AI)</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-3" id="interest1-2-3"><label class="describes-label" for="interest1-2-3"><span class="describes-padding">Computer Games</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-4" id="interest1-2-4"><label class="describes-label" for="interest1-2-4"><span class="describes-padding">Computer Hardware</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-5" id="interest1-2-5"><label class="describes-label" for="interest1-2-5"><span class="describes-padding">Computer Technology/Graphics, Meta Computing</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-6" id="interest1-2-6"><label class="describes-label" for="interest1-2-6"><span class="describes-padding">Simulation</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-7" id="interest1-2-7"><label class="describes-label" for="interest1-2-7"><span class="describes-padding">User Interface, Usability</span></label><a href="#"></a>
+													</li>
+													<li>
+														<input type="checkbox" name="interest1-2-8" id="interest1-2-8"><label class="describes-label" for="interest1-2-8"><span class="describes-padding">Electronis, Microelectronics</span></label><a href="#"></a>
+													</li>
+												</ul>
+										</ul>
+								</ul>
+							
+    					</div>
+  					</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<label class="knowledge-name">Knowledge</label>
+							<input class="form-control" name="knowledge-name" id="knowledge-name" type="text" />
+						</div>
+					</div>
+					<!---------------- Previous / Next Step Button ------------>
+					<div class="previous-next-row">
+						<button class="button-next-step" type="submit">Next Step</button>
+						<button class="button-previous-step" type="">Previous Step</button>
+						<button class="button-skip-step" type="">Skip</button>
+					</div>
+				
+				</form>
+				</div>
+			</div>
+		</div>
+<!------------------footer----------------------->
+	<div class="fluid-container">
+		<footer>
+			<hr id="hr-footer">
+				<ul>
+					<li><a href="#">User Agreement</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Community Guidelines</a></li>
+					<li><a href="#">Cookie Policy</a></li>
+					<li><a href="#">Copyright Policy </a></li>
+					<li><a href="#">2019 iBridge</a></li>
+				</ul>
+		</footer>
+	</div>
+	<script>
+
+  var toggle = function() {
+  var mydiv = document.getElementById('tab-content');
+  if (mydiv.style.display === 'block' || mydiv.style.display === '')
+    mydiv.style.display = 'none';
+  else
+    mydiv.style.display = 'block'
+  }
+
+$('#main-list1').click(function() {
+    $('#first-list1').toggle(100);
+    $('#first-list2').hide(100);
+});
+$('#main-list2').click(function() {
+    $('#first-list2').toggle(100);
+    $('#first-list1').hide(100);
+});
+</script>
+		     <script type="text/javascript">
+       $(document).ready(function () {
+           $('#menu-icon').on('click', function () {
+               $('#sidebar').addClass('active');
+               $('footer').addClass('open');
+               $('#container').addClass('open');
+               $('.logo').addClass('open');
+           });
+       });
+       $(document).ready(function () {
+           $("#close-icon").on('click', function(){
+               $('#sidebar').removeClass('active');
+               $('footer').removeClass('open');
+               $('#container').removeClass('open');
+               $('.logo').removeClass('open');
+           });
+       });
+   </script>
+</body>
+</html>

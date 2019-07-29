@@ -555,7 +555,8 @@ button {
 	stroke-width:3;
 }
 .circle-step1,
-.circle-step2 {
+.circle-step2,
+.circle-step3 {
 	fill:none;
 	stroke-width:3;
 	stroke-linecap:round;
@@ -565,6 +566,9 @@ button {
 }
 .circle-step2 {
 	animation:progress2 1s ease-out forwards;
+}
+.circle-step3 {
+	animation:progress3 1s ease-out forwards;
 }
 /*25% circle progress*/
 
@@ -580,8 +584,15 @@ button {
 		stroke-dasharray:25 100;
 	}
 }
+/*75% circle progress*/
+@keyframes progress3 {
+	0% {
+		stroke-dasharray:50 100;
+	}
+}
 .circular-chart.blue .circle-step1,
-.circular-chart.blue .circle-step2 {
+.circular-chart.blue .circle-step2,
+.circular-chart.blue .circle-step3 {
 	stroke:#0468bf;
 }
 /****** .category******/
@@ -1108,7 +1119,10 @@ input[type="radio"] {
 .start,
 .end,
 .budget,
-.description {
+.description,
+/*interests_knowledge.html*/
+.interests-name,
+.knowledge-name {
 	color:#060609;
 	opacity:0.5;
 	font-size:14px;
@@ -2035,6 +2049,32 @@ input::-webkit-clear-button {
 	color: #fff;
 	font-size: 10px;
 	margin-right: 0px;
+}
+/*interests_knowledge.html css*/
+#tab-content{
+	max-height: 431px;
+	display: none;
+	border-radius: 10px;
+	box-shadow: 0 8px 28px 0 rgba(0, 0, 0, 0.08);
+	background-color: #fff;
+	padding:30px;
+	overflow-y: scroll;
+	margin-bottom: 60px;
+	margin-top: -25px;
+}
+ul li{
+	list-style: none;
+}
+.hide{
+	display: none;
+}
+#first-list1,#first-list2{
+	display: none;
+	padding-inline-start: 0px;
+}
+#tab-text{
+	border: none;
+	margin: 0px;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
