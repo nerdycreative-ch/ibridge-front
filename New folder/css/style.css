@@ -1174,9 +1174,6 @@ input[type="radio"] {
 		margin-right:15px;
 	}
 }
-input[type="radio"] {
-	display:none;
-}
 .companies input[type=radio] + .company:before {
 	content:"\e90e";
 	font-size:16px;
@@ -1215,10 +1212,14 @@ input[type="radio"] {
 	margin-right:45px;
 	margin-top:-20px;
 }
-input[type="checkbox"] {
+#interests-row input[type="checkbox"],
+#describes-row input[type="checkbox"],
+#forgotten-form input[type="checkbox"]{
 	display:none;
 }
-input[type=checkbox] +label:before {
+#interests-row input[type=checkbox] +label:before,
+#describes-row input[type=checkbox] +label:before,
+#forgotten-form input[type=checkbox] +label:before{
 	content:"";
 	display:inline-block;
 	width:16px;
@@ -1232,7 +1233,9 @@ input[type=checkbox] +label:before {
 	position:absolute;
 	margin-top:3px;
 }
-input[type=checkbox]:checked + label:before {
+#interests-row input[type=checkbox]:checked + label:before,
+#describes-row input[type=checkbox]:checked + label:before,
+#forgotten-form input[type=checkbox]:checked + label:before{
 	content:"\e912";
 	font-family:'ibridge-icon';
 	color:#fff;
@@ -2061,6 +2064,7 @@ input::-webkit-clear-button {
 	overflow-y: scroll;
 	margin-bottom: 60px;
 	margin-top: -25px;
+	font-size: 14px;
 }
 ul li{
 	list-style: none;
@@ -2075,6 +2079,39 @@ ul li{
 #tab-text{
 	border: none;
 	margin: 0px;
+}
+#tab-content input[type="checkbox"]{
+	display: none;
+}
+#tab-content input[type=checkbox] +label:before{
+	content:"\e903";
+	font-size:14px;
+	color:#e5e5e5;
+	font-family:"ibridge-icon";
+	background-color: #fff;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+#tab-content input[type=checkbox]:checked + label:before{
+	content:"\e902";
+	background-color:#0468bf;
+	color:#fff;
+}
+#tab-content a{
+	padding: 0px;
+	margin-top: 30px;
+}
+#nested-span{
+	display: none;
+}
+.wrap-ul{
+	margin-top: 30px;
+}
+#nested1{
+	display: none;
+}
+.add{
+	display: inline-block;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
