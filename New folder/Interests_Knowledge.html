@@ -96,17 +96,18 @@
 					<p class="step-name">Choose Interests & Knowledge</p>
 					<hr id="header-hr">
 					<p class="main-info">Main Information</p>
+					<p id="selected"></p>
 					<!---------------- Main Information ------------>
 				<form action="#" method="POST">
 					<div class="row">
 							<div class="col-md-12">
 								<label class="interests-name">Interests</label>
-								<input class="form-control" name="interests-name" id="interests-name" type="text" onclick="toggle();"/>
+								<div class="status" name="interests-name" id="status" onclick="toggle();"/></div>
 							</div>
 					</div>
 
 				<div id="tab-content">
-					<input type="text" class="form-control" id="tab-text" placeholder="Type keyword or choose from options below">
+					<input type="text" id="tab-text" placeholder="Type keyword or choose from options below">
 					<hr>
 					<div class="row">
 					  	<div class="col-lg-4"> 
@@ -116,7 +117,7 @@
 							</nav>
 					    </div>
 					
-						<div class="col-lg-8">
+					<div class="col-lg-8">
 					   
 	      						<!-- <ul id="first-list1">
 									<li id="first-list1-item">
@@ -206,22 +207,23 @@
 								</ul>
 							 -->   
 <div class="wrap-ul"> 
+
 	<ul class="nested">
       <li>
       	<span class="caret" id="nested-span">
-      		<input type="checkbox" id="first-nest1">
+
       		<label for="first-nest1">Electronics, IT & Telecomms</label>
       	</span>
         <ul class="nested" id="nested1">
           <li>
-          	<span class="caret">
-          		<input type="checkbox" id="second-nest1">
+          	<span class="caret" id="nested-span1">
+          		
           		<label for="second-nest1">Electronis, Microelectronics</label>
           	</span>
           </li>
 	      <li>
 	      	<span class="caret">
-	      		<input type="checkbox" id="second-nest2">
+	
 	      		<label for="second-nest2">Information Processing & Systems, Workflow</label>
 	      	</span>
 	            <ul class="nested" id="nested2">
@@ -231,7 +233,7 @@
 	              <li><input type="checkbox" id="third-nest4"><label for="third-nest4">Computer Games</label></li>
 	              <li><input type="checkbox" id="third-nest5"><label for="third-nest5">Computer Hardware</label></li>
 	              <li><input type="checkbox" id="third-nest6"><label for="third-nest6">Computer Technology/Graphics, Meta Computing</label></li>
-	              <li><input type="checkbox" id="third-nest7"><label for="third-nest7">Simulation</label></li>
+	              <li><input type="checkbox" id="third-nest7" value="Simulation"><label for="third-nest7">Simulation</label></li>
 	              <li><input type="checkbox" id="third-nest8"><label for="third-nest8">User Interface, Usability</label></li>
 	            </ul>
 	        </li>
@@ -285,12 +287,24 @@
     mydiv.style.display = 'block'
   }
 
-$('#main-list1').click(function() {
-    $('#nested-span').toggle(100);
+$('#main-list2').click(function() {
+    $('.wrap-ul').toggle(100);
 });
-$('#nested-span').click(function() {
-    $('#nested1').toggle(100);
+
+
+$(function () {
+    var cb = $(".nested input[type='checkbox']");
+    cb.on('click', function () {
+        var selected = [];
+        cb.each(function () {
+            if (this.checked) {
+                selected.push($(this).next().text());
+            }
+        });
+        $("#status").text(selected.join(','));
+    });
 });
+
 </script>
 		     <script type="text/javascript">
        $(document).ready(function () {

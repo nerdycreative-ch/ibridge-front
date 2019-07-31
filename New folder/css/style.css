@@ -2078,7 +2078,10 @@ ul li{
 }
 #tab-text{
 	border: none;
-	margin: 0px;
+	width: 100%;
+}
+#tab-text::placeholder{
+	text-align: center;
 }
 #tab-content input[type="checkbox"]{
 	display: none;
@@ -2101,18 +2104,30 @@ ul li{
 	padding: 0px;
 	margin-top: 30px;
 }
-#nested-span{
-	display: none;
+#tab-text:-webkit-autofill{
+	background-color: white !important;
 }
 .wrap-ul{
 	margin-top: 30px;
-}
-#nested1{
 	display: none;
 }
-.add{
-	display: inline-block;
+/*remove blue color displayed when we autofill*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
+#status{
+	margin-bottom:30px;
+	margin-top: 10px;
+	border:1px solid #e5e5e5;
+	min-height:35px;
+	border-radius:5px;
+	color:#060609;
+	padding:7px;
+	font-size: 14px;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
