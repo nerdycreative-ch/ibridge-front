@@ -1,3 +1,35 @@
+@font-face {
+	font-family: "HelveticaNeue-Bold";
+	src: url("../fonts/HelveticaNeue-Bold.otf") format("opentype");
+}
+@font-face{
+
+font-family:"HelveticaNeue-Heavy";
+ src:url("../fonts/HelveticaNeue-Heavy.otf") format("opentype");
+
+}
+@font-face{
+
+font-family:"HelveticaNeue-Light";
+ src:url("../fonts/HelveticaNeue-Light.otf") format("opentype");
+
+}
+@font-face{
+
+font-family:"HelveticaNeue-Medium";
+ src:url("../fonts/HelveticaNeue-Medium.otf") format("opentype");
+
+}
+@font-face{
+
+font-family:"HelveticaNeue-Roman";
+ src:url("../fonts/HelveticaNeue-Roman.otf") format("opentype");
+
+}
+* {
+	font-family:"HelveticaNeue-Roman";
+}
+
 body{
     font-family: HelveticaNeue;
 }
@@ -16,14 +48,17 @@ body{
     z-index: 100;
 }
 .box-darker{
-    float:right;
     margin-top: -3%;
-    width: 75%;
+    width: 80%;
     height: 100%;
-    position: relative;
+    right:0;
+    position: absolute;
     background-color: rgba(229, 229, 229, 0.25);
-    padding:281px 0 120px;
+    padding:280px 0 120px;
     z-index:-1;
+}
+.box-darkest{
+    padding: 280px 0 120px;
 }
 .tranls-50{
     transform: translateY(-50%);
@@ -42,7 +77,7 @@ body{
 .second-lead{
     opacity: 0.5;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 1;
     letter-spacing: 1.61px;
     margin-top:90px;
@@ -56,9 +91,13 @@ body{
 .pos-abs{
     position: absolute;
 }
-.vertical-middle {
+.hero-txt {
     position: relative;
-    top: -50vh;
+    top: 25vh;
+}
+.hero-img{
+    top:-38vh;
+    margin-top: 47px;
 }
 #home-container [class^="icon-"], [class*=" icon-"]{
     color:#0468bf;
@@ -66,8 +105,8 @@ body{
 .h-vh{
     height: 95vh;
 }
-.pd-l{
-    padding-left: 45px;
+.mrg-l{
+    margin-left:30px;
 }
 .m-t-b{
     padding:205px 0 90px;
@@ -105,33 +144,32 @@ body{
     border:1.5px solid #0468bf;
     margin:60px 0 45px -15px;
 }
-#square-hr{
-    margin:0 5px -3px 30px;
+.square-simplicity{
+    margin: 0;
+    margin-bottom: -10px;
+    padding-right:5px;
+    width: 10px;
+    height: 10px;
     float: left;
-    border: 5px solid #0468bf;
-}
-#how-works-hr{
-    float:left;
-    height:10px;
-    border: 5px solid #0468bf;
+    background-color: #0468bf
 }
 .square-how-works{
     width:10px;
     height:20px;
-    border:5px solid #0468bf;
+    background-color:#0468bf;
     margin-bottom: 43px;
 }
 .square-shadow-box{
     width:10px;
     height:10px;
-    border:5px solid #0468bf;
+    background-color:#0468bf;
     margin-bottom:-15px;
     margin-left: -10px;
 }
 .square-our-fig{
     width: 20px;
     height: 50px;
-    border: 10px solid #0468bf;
+    background-color: #0468bf;
     margin-bottom: -46px;
     margin-left: 57%;
 }
@@ -141,7 +179,7 @@ body{
 .square-testimonials{
     width:10px;
     height:20px;
-    border:5px solid #0468bf;
+    background-color:#0468bf;
     margin-bottom: -28px;
     margin-left: -10px;
 }
@@ -182,11 +220,14 @@ body{
     z-index: 1;
     position: relative;
 }
+.no-project-txt{
+    margin-bottom:0;
+    z-index:1;
+}
 
 
 
 .bg-img{
-    padding-top:46px;
     width: 702px;
     height: 702px;
     object-fit: contain;
@@ -199,7 +240,7 @@ body{
     color: rgba(6, 6, 9, 0.5);
 }
 .no-project-txt a{
-    font-weight: 500;
+    font-weight: bold;
     color:inherit;
 }
 
@@ -213,14 +254,15 @@ body{
     height: 150px;
     object-fit: cover;
     z-index: 1077!important;
-    right: 200px;
-    position: absolute;
+    float: right;
+    margin-right: 5%;
+    position: relative;
     margin-top: -4%;
 }
 .dots-header{
     top:35vh;
     position: absolute;
-    right: 60vh;
+    right: 35%;
     width: 479.5px;
     height: 515.9px;
     object-fit: contain;
@@ -238,7 +280,7 @@ body{
 .dots-how-works{
     position: absolute;
     left:0;
-    margin-top:12%;
+    margin-top:-24%;
     width: 503.9px;
     object-fit: contain;
     border-radius: 50%;
@@ -251,10 +293,6 @@ body{
 .icon-profile{
     font-size: 50px;
     position: absolute;
-
-}
-.how-works .box-item{
-    margin-bottom:90px;
 }
 .box-item-desc{
     padding-left:80px;
@@ -309,7 +347,6 @@ body{
     opacity: 0.5;
     font-size: 19px;
     font-weight: 300;
-    line-height: 3.37;
 }
 .shadow-box.tranls-50{
     padding:122px 60px;
@@ -404,4 +441,143 @@ body{
     padding-left:20px;
     font-size:18px;
     color:#fff!important;
+}
+
+/*
+    ===================
+        MediaQueries
+    ===================
+*/
+@media screen and (max-width: 768px){
+    .lead{
+        font-size: 30px;
+        line-height: 1.57;
+    }
+    .m-t-b{
+        padding:205px 0 180px;
+    }
+
+
+
+    #header-txt{
+        font-size: 39px;
+        line-height: 1.1;
+    }
+    .hero-txt{
+        top:0;
+    }
+    #header-hr{
+        margin-left:0;
+    }
+
+    .mrg-l{
+        margin-left:auto;
+    }
+    #how-title{
+        margin-top:-25px;
+        padding-bottom:60px;
+    }
+    .our-fig .bg-color{
+        width:100%;
+    }
+    .our-fig .bg-color .lead {
+        padding-bottom: 103px;
+    }
+    .our-fig  .bg-color p:first-child{
+        margin-bottom:45px;
+    }
+    .our-fig .bg-color p:last-child{
+        margin-bottom: 75px;
+    }
+    .shadow-box.partner-section{
+        padding:75px;
+    }
+    .partner-section .box-item.lead-div{
+        text-align: center;
+    }
+
+
+
+    /* IMAGES */
+    .hero-img{
+        top:0;
+        margin-top:0;
+        margin-bottom:120px;
+    }
+    #testimonials-img{
+        width:100%;
+        height: unset;
+    }
+    .bg-img{
+        width: 100%;
+        margin-top: 48px;
+        height: unset;
+    }
+    #testimonials-img{
+        margin:auto;
+        width: 125px;
+        height: 125px;
+    }
+    
+
+    /* BOXES */
+    .shadow-box{
+        padding: 90px 45px;
+    }
+    .shadow-box .box-item:not(:last-of-type){
+        margin-bottom:75px;
+    }
+    .how-works .box-item:not(:last-of-type){
+        margin-bottom:90px;
+    }
+    
+
+    
+    .box-darker{
+        width:100%;
+        height: 105%;
+        margin-top:0;
+        padding-top:
+    }
+    /* SQUARES */
+    .square-hero{
+        position: relative;
+        float: right;
+        right:20%;
+        margin-top: -15vh;
+        top: 0;
+        margin-bottom: 0;
+        width: 44.2px;
+        height: 166.6px;
+    }
+
+
+    /* DOTS */
+    .dots-header{
+        width: 100%;
+        height: unset;
+        right:0;
+        top: -34px;
+    }
+    .dots-box-darker{
+        margin-top:-9%;
+    }
+    .dots-how-works{
+        width:100%;
+    }
+    .dots-testimonials{
+        width:100%;
+        margin-left:0;
+    }
+
+    .box-darkest .lead{
+        line-height: 1.4;
+    }
+    .why-publish{
+        font-size: 14px;
+        line-height: 2.29;
+    }
+    .square-how-works {
+        margin-bottom:25px;
+    }
 }

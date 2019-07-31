@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 </head>
 <body>
 <!---------------header-------------->
@@ -47,17 +51,17 @@
     <section class="hero">
         <div class="container">
             <div class="row">   
-                <div class="col-md-12">
-                    <img class="bg-img" src="img/background@3x.png">
-                    <p class="square-hero dsp-inline"></p>
-                </div>
-                
-                <div class="col-md-7 vertical-middle">
+                <div class="col-md-7 hero-txt">
                     <h1 id="header-txt">Turn ideas into real innovation.</h1>
                     <hr id="header-hr">
                     <p class="no-project-txt">No project at the moment? <a href="#">Create an account</a></p>
                 </div>
-                <img class="dots-header" src="img/dots shape.svg">
+                <div class="col-md-12 hero-img">
+                    <img class="dots-header" src="img/dots shape.svg">
+                    <img class="bg-img" src="img/background@3x.png">
+                    <p class="square-hero dsp-inline"></p>                    
+                </div>
+                
             </div><!-- .row -->
         </div><!-- .container -->
     </section><!-- section Hero -->
@@ -65,9 +69,14 @@
 
     <div class="container" id="home-container">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="lead pd-l">Our simplicity</h2>
-                <hr id="square-hr">
+            <div class="col-md-12 mrg-l">
+                <div class="dsp-inline">
+                    <p class="square-simplicity"></p> 
+                </div>
+                <div class="dsp-inline">                
+                    <h2 class="lead pd-l">Our simplicity</h2>
+                </div>
+
             </div>
         </div><!-- .row -->
 
@@ -96,14 +105,15 @@
                     </div><!-- .box-item-desc -->
                 </div><!-- .col-md-4 box-item -->
             </div>
-        </section><!-- section Shadow-box -->   
+        </section><!-- section Shadow-box -->  
+        <img class="dots-box-darker" src="img/dots-shape2.svg"> 
     </div><!-- .container -->
 
-    <img class="dots-box-darker" src="img/dots-shape2.svg">
-    <section class="box-darker">
+
+    <section class="box-darker"></section>
+    <section class="box-darkest">
         <div class="container">
-            
-            <div class="col-md-6 offset-md-2">
+            <div class="col-md-6 offset-md-4">
                 <p class="lead">Why should I publish my precious idea?</p>
                 <hr id="header-hr">
                 <p class="why-publish">Lorem ipsum dolor sit amet, alia atqui quaestio pri ex, minim fuisset cotidieque est ex. Omnes everti antiopam nec an. Te minim dolorum constituto eum, vis prima debet in, eum ei mazim epicuri. Duo ea urbanitas moderatius, et vix discere insolens mediocritatem. Ne quaestio pericula adolescens nec, est ut altera inciderint adversarium. Et errem gubergren mel.</p>
@@ -152,9 +162,9 @@
                         <p>Once you have chosen one or more consultants, we will prepare the contracts. Everything is done online.</p>
                     </div><!-- .box-item-desc -->
                 </div><!-- ,col-md-4 box-item -->
-                <img class="dots-how-works" src="img/dots-shape.svg">
             </div>
-        </div>
+        </div><!-- .container -->
+        <img class="dots-how-works" src="img/dots-shape.svg">
     </section><!-- section How-works -->
 
         
@@ -162,8 +172,8 @@
         <p class="square-our-fig dsp-inline"></p>
         <div class="bg-color">
             <div class="container">
-                <p class="lead pos-center clr-white">Our in figures</p>
-                <div class="row">
+                <h1 class="lead pos-center clr-white">Our in figures</h1>
+                <div class="row pos-center">
                     <div class="col-md-3 clr-white">
                         <p>300+</p>
                         <p>Investor Members</p>
@@ -189,18 +199,42 @@
 
 
     <div class="container tranls-50">
-        <section class="shadow-box">
+        <section class="shadow-box partner-section">
             <div class="row">
-                <div class="col-md-4 box-item">
+                <div class="col-md-4 box-item lead-div">
                     <p class="lead dsp-inline">Partners</p>
                     <p class="square-shadow-box dsp-inline"></p>
                 </div><!-- .col-md-4 box-item -->
-                <div class="col-md-4 box-item">
-                    <img src="img/europian-comission.svg">
-                </div><!-- ,col-md-4 box-item -->
-                <div class="col-md-4 box-item">
-                    <img src="img/health-research.jpg">
-                </div><!-- .col-md-4 box-item -->
+                   <div class="owl-carousel owl-theme owl-loaded">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item">
+                                <div class="box-item">
+                                    <img src="img/europian-comission.svg">
+                                </div><!-- ,col-md-4 box-item -->
+                            </div>
+                            <div class="owl-item">
+                                <div class="box-item">
+                                    <img src="img/health-research.jpg">
+                                </div><!-- .col-md-4 box-item -->
+                            </div>
+                            <div class="owl-item">
+                                <div class="box-item">
+                                    <img src="img/europian-comission.svg">
+                                </div><!-- ,col-md-4 box-item -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-nav">
+                        <div class="owl-prev">prev</div>
+                        <div class="owl-next">next</div>
+                    </div>
+                    <div class="owl-dots">
+                        <div class="owl-dot active"><span></span></div>
+                        <div class="owl-dot"><span></span></div>
+                        <div class="owl-dot"><span></span></div>
+                    </div>
+                </div>
             </div>
         </section><!-- section Shadow-box.transl-50-->  
     </div><!-- .container-->
@@ -281,6 +315,11 @@
                 </div><!-- .container -->
             </div><!-- .bg-color -->
     </section><!-- section Sign-up-footer -->
+    <script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+    });
+    </script>
 
 </body>
 </html>
