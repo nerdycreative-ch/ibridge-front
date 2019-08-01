@@ -102,7 +102,9 @@
 					<div class="row">
 							<div class="col-md-12">
 								<label class="interests-name">Interests</label>
-								<div class="status" name="interests-name" id="status" onclick="toggle();"/></div>
+								<div class="checked-interests-container" onclick="toggle();">
+									<div id="checked-interests"></div>
+								</div>
 							</div>
 					</div>
 
@@ -112,8 +114,8 @@
 					<div class="row">
 					  	<div class="col-lg-4"> 
 						    <nav class="nav flex-column">
-								  <a class="nav-link" href="#" id="main-list1">Scientific Disciplines</a>
-								  <a class="nav-link" href="#" id="main-list2">Industrials Sectors</a>
+								  <a class="nav-link" href="#main-list1" id="main-list1">Scientific Disciplines</a>
+								  <a class="nav-link" href="#main-list2" id="main-list2">Industrials Sectors</a>
 							</nav>
 					    </div>
 					
@@ -278,7 +280,7 @@
 		</footer>
 	</div>
 	<script>
-
+/*show tab-content(interests list) when clicked on div*/
   var toggle = function() {
   var mydiv = document.getElementById('tab-content');
   if (mydiv.style.display === 'block' || mydiv.style.display === '')
@@ -291,7 +293,7 @@ $('#main-list2').click(function() {
     $('.wrap-ul').toggle(100);
 });
 
-
+/*add all checked checkboxes that have .nested class in div with id checked-interests */
 $(function () {
     var cb = $(".nested input[type='checkbox']");
     cb.on('click', function () {
@@ -301,12 +303,12 @@ $(function () {
                 selected.push($(this).next().text());
             }
         });
-        $("#status").text(selected.join(','));
+        $("#checked-interests").text(selected.join(','));
     });
 });
-
 </script>
-		     <script type="text/javascript">
+<!-- Add Open and Active classes when clicked menu-button to show the right menu -->
+	<script type="text/javascript">
        $(document).ready(function () {
            $('#menu-icon').on('click', function () {
                $('#sidebar').addClass('active');
