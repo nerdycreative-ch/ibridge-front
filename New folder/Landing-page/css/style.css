@@ -48,17 +48,18 @@ body{
     z-index: 100;
 }
 .box-darker{
-    margin-top: -3%;
-    width: 80%;
+    margin-top: -11%;
+    width: 100%;
     height: 100%;
-    right:0;
-    position: absolute;
-    background-color: rgba(229, 229, 229, 0.25);
-    padding:280px 0 120px;
-    z-index:-1;
+    float: right;
 }
 .box-darkest{
+    position: relative;
+    z-index: -1;
     padding: 280px 0 120px;
+    width: 80%;
+    float: right;
+    background: rgba(229, 229, 229, 0.25);
 }
 .tranls-50{
     transform: translateY(-50%);
@@ -96,7 +97,7 @@ body{
     top: 25vh;
 }
 .hero-img{
-    top:-38vh;
+    top:-31vh;
     margin-top: 47px;
 }
 #home-container [class^="icon-"], [class*=" icon-"]{
@@ -137,7 +138,7 @@ body{
     background-color:#062540;
     position: absolute;
     right: 120px;
-    top: 65%;
+    top: 73%;
 }
 #header-hr{
     width:100px;
@@ -186,10 +187,9 @@ body{
 
 
 
-.navbar{
-    width:100%;
-    margin-top:30px;
-    padding: 0px;
+
+.nav-container{
+    padding-top:30px;
 }
 .nav-item.dropdown{
     float: right;
@@ -210,6 +210,7 @@ body{
     color:  #0468bf;
     padding:8px 15px;
     margin-left: 45px;
+    float:right;
 }
 #header-txt{
     font-size: 80px;
@@ -224,8 +225,9 @@ body{
     margin-bottom:0;
     z-index:1;
 }
-
-
+.navbar-dropdown{
+    float:right;
+}
 
 .bg-img{
     width: 702px;
@@ -273,7 +275,6 @@ body{
     height: 397.2px;
     margin-top:-25vh;
     margin-left: 190px;
-    left: 60vh;
     object-fit: contain;
     margin-bottom: 14px;
 }
@@ -312,15 +313,6 @@ body{
     color: rgba(6, 6, 9, 0.7);
     margin-bottom:0;
 }
-
-.why-publish{
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 2;
-    text-align: left;
-    color: #060609;
-    margin:0;
-}
 .our-fig{
     height: fit-content;
 }
@@ -356,7 +348,7 @@ body{
     width: 445px;
     height: 445px;
 }
-.testimonials blockquote{
+.why-publish{
     font-size: 20px;
     font-weight: 300;
     line-height: 1.9;
@@ -364,7 +356,7 @@ body{
     padding-top:45px;
     margin-bottom: 60px;
 }
-.testimonials cite{
+.testimonials .cite{
     opacity: 0.7;
     font-size: 14px;
     line-height: 1.71;
@@ -442,13 +434,33 @@ body{
     font-size:18px;
     color:#fff!important;
 }
-
+#owl-carousel .item {
+    margin: 3px;
+}
+#owl-carousel .item img {
+    display: block;
+    width:193px;
+    height: 50px;
+    padding-left: 10px;    
+    padding-right: 10px;
+}
+.owl-controls{
+    visibility: hidden;
+    margin-top:0;
+    height:0;
+}
+.owl-pagination, .owl-page, .owl-page.active span{
+    height: 0px;
+}
+#img-p-t-b{
+    padding:12px 0px;
+}
 /*
     ===================
         MediaQueries
     ===================
 */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     .lead{
         font-size: 30px;
         line-height: 1.57;
@@ -462,6 +474,7 @@ body{
     #header-txt{
         font-size: 39px;
         line-height: 1.1;
+        padding-top:90px;
     }
     .hero-txt{
         top:0;
@@ -492,9 +505,60 @@ body{
     .shadow-box.partner-section{
         padding:75px;
     }
-    .partner-section .box-item.lead-div{
+    .box-darkest .lead{
+        line-height: 1.4;
+    }
+    .why-publish{
+        font-size: 16px;
+        line-height: 2.29;
         text-align: center;
     }
+    .testimonials{
+        margin-bottom: 205px;
+    }
+    .testimonials cite{
+        float: left;
+        position: relative;
+        left: 50%;
+    }
+    .testimonials cite > div{
+        float: left;
+        position: relative;
+        left: -50%;
+    }
+    .create-acc-txt{
+        margin-bottom: 75px;
+    }
+    .create-acc-txt p{
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    .join-platform{
+        width:100%;
+        margin:0;
+    }
+    .sign-up-footer > .info-section [class^="col-md-"], [class*=" col-md-"] p:last-of-type{
+        margin-bottom: 0;
+    }
+    .copyright-home{
+        margin-top: 30px;
+    }
+    .social-icons{
+        margin-top:20px;
+    }
+    .footer-home .social-icons span i{
+        float: unset;
+        padding-left: 0;
+        padding-right:20px;
+    }
+    .sign-up-footer .bg-color{
+        padding-bottom: 90px;
+    }
+    .why-publish{
+        font-size: 16px;
+        line-height: 1.75;
+    }
+   
 
 
 
@@ -512,6 +576,7 @@ body{
         width: 100%;
         margin-top: 48px;
         height: unset;
+        margin-bottom: 0;
     }
     #testimonials-img{
         margin:auto;
@@ -530,15 +595,14 @@ body{
     .how-works .box-item:not(:last-of-type){
         margin-bottom:90px;
     }
-    
-
-    
     .box-darker{
         width:100%;
-        height: 105%;
         margin-top:0;
-        padding-top:
     }
+    .box-darkest{
+        width:100%;
+    }
+
     /* SQUARES */
     .square-hero{
         position: relative;
@@ -550,34 +614,86 @@ body{
         width: 44.2px;
         height: 166.6px;
     }
-
+    .testimonials-img-div{
+        margin:auto;
+        width: fit-content;
+    }
+    .square-how-works {
+        margin-bottom:25px;
+    }
 
     /* DOTS */
     .dots-header{
-        width: 100%;
-        height: unset;
-        right:0;
+        width: 235.7px;
+        height: 253.6px;
+        right: 20%;
         top: -34px;
     }
     .dots-box-darker{
         margin-top:-9%;
+        position: absolute;
+        right: 15%;
+        margin-right: 0;
     }
     .dots-how-works{
         width:100%;
     }
     .dots-testimonials{
-        width:100%;
+        width: 120px;
+        height: 107px;
         margin-left:0;
+        margin-bottom: 0px;
+        margin-top:0px;
+        left: 7vh;
+        top: 7vh;
+        position: absolute;
+    }    
+}
+@media screen and (max-width:1023px) and (min-width: 768px){
+    #header-txt{
+        font-size: 39px;
+        line-height: 1.1;
     }
-
-    .box-darkest .lead{
-        line-height: 1.4;
+    .hero-txt{
+        top:15vh;
     }
-    .why-publish{
-        font-size: 14px;
-        line-height: 2.29;
+    .hero-img{
+        top: -35vh;
+        margin-top: 47px;
+        float: right;
+        margin-bottom: -200px;
     }
-    .square-how-works {
-        margin-bottom:25px;
+    .dots-header {
+        top: 15vh;
+        width:70%;
+        height: 70%;
+        right: 15%;
+    }
+    .dots-box-darker{
+        margin-top: -9%;
+        position: absolute;
+        right: 15%;
+        margin-right: 0;
+    }
+    .bg-img{
+        width: 70%;
+    }
+    .box-darker {
+        margin-top: 0;
+    }
+    .square-hero{
+        right: 80px;
+        top: 59%;
+        width: 5em;
+        height: 14em;
+    }
+    .testimonials{
+        padding-bottom: 120px;
+    }
+    #testimonials-img{
+        max-width: 100%;
+        max-height: 100%;
+        height: unset;
+        width: unset;
     }
 }
