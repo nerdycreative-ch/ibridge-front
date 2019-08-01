@@ -2053,7 +2053,9 @@ input::-webkit-clear-button {
 	font-size: 10px;
 	margin-right: 0px;
 }
-/*interests_knowledge.html css*/
+/*
+interests_knowledge.html css
+*/
 #tab-content{
 	max-height: 431px;
 	display: none;
@@ -2063,7 +2065,7 @@ input::-webkit-clear-button {
 	padding:30px;
 	overflow-y: scroll;
 	margin-bottom: 60px;
-	margin-top: -25px;
+
 	font-size: 14px;
 }
 ul li{
@@ -2078,40 +2080,74 @@ ul li{
 }
 #tab-text{
 	border: none;
-	margin: 0px;
+	width: 100%;
+	margin-bottom: 14px;
+}
+#tab-text::placeholder{
+	text-align: center;
 }
 #tab-content input[type="checkbox"]{
 	display: none;
 }
 #tab-content input[type=checkbox] +label:before{
 	content:"\e903";
-	font-size:14px;
 	color:#e5e5e5;
 	font-family:"ibridge-icon";
-	background-color: #fff;
 	border-radius: 3px;
 	margin-right: 10px;
 }
 #tab-content input[type=checkbox]:checked + label:before{
 	content:"\e902";
 	background-color:#0468bf;
-	color:#fff;
 }
 #tab-content a{
 	padding: 0px;
 	margin-top: 30px;
 }
-#nested-span{
-	display: none;
+#tab-text:-webkit-autofill{
+	background-color: white !important;
 }
 .wrap-ul{
 	margin-top: 30px;
-}
-#nested1{
 	display: none;
 }
-.add{
-	display: inline-block;
+/*remove blue color displayed when we autofill*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0px 100px #fff inset;
+
+}
+.checked-interests-container{
+	margin-bottom:5px;
+	border:1px solid #e5e5e5;
+	min-height:46px;
+	border-radius:5px;
+	color:#060609;
+	padding:7px;
+	font-size: 14px;
+}
+#checked-interests{
+	background-color: #f5f5f5;
+	padding: 8px 15px;
+	border-radius:5px;
+}
+.caret {
+  	cursor: pointer;
+ 	-webkit-user-select: none; /* Safari 3.1+ */
+  	-moz-user-select: none; /* Firefox 2+ */
+ 	-ms-user-select: none; /* IE 10+ */
+ 	user-select: none;
+}
+
+.caret::before {
+  	content: "\e90b";
+  	font-family: "ibridge-icon";
+  	font-weight: bolder;
+  	font-size: 12px;
+	background:#ffffff;
+	border-radius:3px;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
