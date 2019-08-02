@@ -1677,7 +1677,7 @@ input::-webkit-clear-button {
 	position:absolute;
 	content:"\e900";
 	font-family:"ibridge-icon";
-	top:18px;
+	margin-top: 3px;
 	color:#060609;
 	right:14px;
 	width:15px;
