@@ -1949,8 +1949,8 @@ input::-webkit-clear-button {
 	-ms-overflow-style:none; /*hide right menu's scroll bars on InternetExplorer*/
 	scrollbar-width: none; /*hide right menu's scroll  bars on Firefox*/
 }
-/*hide right menu's scroll  bars on Safari and Chrome*/
-#sidebar::-webkit-scrollbar{
+/*hide right menu's and interests checkbox on interests_knowledge.html scroll  bars on Safari and Chrome*/
+#sidebar::-webkit-scrollbar, #tab-content::-webkit-scrollbar{
 	display: none;
 }
 #sidebar ul li a i{
@@ -2130,8 +2130,12 @@ input:-webkit-autofill:active{
 }
 #checked-interests{
 	background-color: #f5f5f5;
-	padding: 8px 15px;
+	padding: 4px 15px;
 	border-radius:5px;
+	display: none;
+}
+.active{
+	display: inline-block;
 }
 .caret {
   	cursor: pointer;

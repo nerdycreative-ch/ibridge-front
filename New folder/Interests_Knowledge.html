@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
 </head>
 <body>
@@ -103,7 +105,7 @@
 							<div class="col-md-12">
 								<label class="interests-name">Interests</label>
 								<div class="checked-interests-container" onclick="toggle();">
-									<div id="checked-interests"></div>
+									<div class="checked-interests"></div>
 								</div>
 							</div>
 					</div>
@@ -235,7 +237,7 @@
 	              <li><input type="checkbox" id="third-nest4"><label for="third-nest4">Computer Games</label></li>
 	              <li><input type="checkbox" id="third-nest5"><label for="third-nest5">Computer Hardware</label></li>
 	              <li><input type="checkbox" id="third-nest6"><label for="third-nest6">Computer Technology/Graphics, Meta Computing</label></li>
-	              <li><input type="checkbox" id="third-nest7" value="Simulation"><label for="third-nest7">Simulation</label></li>
+	              <li><input type="checkbox" id="third-nest7"><label for="third-nest7">Simulation</label></li>
 	              <li><input type="checkbox" id="third-nest8"><label for="third-nest8">User Interface, Usability</label></li>
 	            </ul>
 	        </li>
@@ -297,18 +299,23 @@ $('#main-list2').click(function() {
 $(function () {
     var cb = $(".nested input[type='checkbox']");
     cb.on('click', function () {
+    	$('.checked-interests').addClass('active');
         var selected = [];
         cb.each(function () {
             if (this.checked) {
                 selected.push($(this).next().text());
             }
         });
-        $("#checked-interests").text(selected.join(','));
+        $(".checked-interests").text(selected.join(','));
     });
 });
 </script>
 <!-- Add Open and Active classes when clicked menu-button to show the right menu -->
+
 	<script type="text/javascript">
+		$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
        $(document).ready(function () {
            $('#menu-icon').on('click', function () {
                $('#sidebar').addClass('active');
