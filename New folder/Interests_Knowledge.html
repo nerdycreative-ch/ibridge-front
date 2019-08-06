@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
-	
+	<link rel="stylesheet" href="fm.tagator.jquery.css"/>
 </head>
 <body>
 <!---------------header-------------->
@@ -102,63 +102,83 @@
 					<p id="selected"></p>
 					<!---------------- Main Information ------------>
 					<form action="#" method="POST">
-							<div class="row">
-									<div class="col-md-12">
-										<label class="interests-name">Interests</label>
-										<div class="checked-interests-container">
-											<div class="checked-interests"></div>
-										</div>
+					<div class="row">
+							<div class="col-md-12">
+								<label class="interests-name">Interests</label>
+									<div class="checked-interests-container">
+										<div class="checked-interests"></div>
 									</div>
 							</div>
+					</div>
+				<div id="tab-content">
+					<input type="text" class="form-control" id="tab-text" placeholder="Type keyword or choose from options below">
+					<hr>
+					<div class="row" id="tab-content-interests">
+					  	<div class="col-lg-3"> 
+	 					    <nav class="nav flex-column">
+								  <p class="nav-link1" href="#" id="main-list1">Scientific Disciplines</p>
+								  <p class="nav-link2" href="#" id="main-list2">Industrials Sectors</p>
+							</nav>
+					    </div>
+					
+						<div class="col-lg-9">
+							<ul id="myUL">
+							    <ul class="nested" id="first-list1">
+							      <li><span class="caret">Interests1</span>
+							        <ul class="nested">
+							          <li><span class="caret">Interests11</span>
+								          <li><span class="caret">Interests12</span>
+								            <ul class="nested">
+								              <li><input type="checkbox" id="Interests111"><label for="Interests111">Interests111</label></li>
+								              <li><input type="checkbox" id="Interests112"><label for="Interests112">Interests112</label></li>
+								              <li><input type="checkbox" id="Interests113"><label for="Interests113">Interests113</label></li>
+								              <li><input type="checkbox" id="Interests114"><label for="Interests114">Interests114</label></li>
+								              <li><input type="checkbox" id="Interests115"><label for="Interests115">Interests115</label></li>
+								            </ul>
+								          </li>
+							      	  </li>
+							        </ul>
+							      </li>  
+							    </ul>
 
-						<div id="tab-content">
-							<input type="text" id="tab-text" class="tagator" data-tagator-use-dimmer="true" data-tagator-autocomplete="['first', 'second', 'third']" placeholder="Type keyword or choose from options below">
-							<hr>
-							<div class="row">
-							  	<div class="col-lg-4"> 
-								    <nav class="nav flex-column">
-										  <a class="nav-link" href="#main-list1" id="main-list1">Scientific Disciplines</a>
-										  <a class="nav-link" href="#main-list2" id="main-list2">Industrials Sectors</a>
-									</nav>
-							    </div>
-								<div class="col-lg-8"> 
-									<div class="wrap-ul"> 
-										<ul class="nested">
-									      	<li>
-										      	<span class="caret" id="nested-span">
-										      		<input type="checkbox" id="first-nest1">
-										      		<label for="first-nest1">Electronics, IT & Telecomms</label>
-										      	</span>
-										        <ul class="nested" id="nested1">
-										          	<li>
-											          	<span class="caret" id="nested-span1">
-											          		<input type="checkbox" id="second-nest1">
-											          		<label for="second-nest1">Electronis, Microelectronics</label>
-											          	</span>
-										          	</li>
-											      	<li>
-												      	<span class="caret">
-												      		<input type="checkbox" id="second-nest2">
-												      		<label for="second-nest2">Information Processing & Systems, Workflow</label>
-												      	</span>
-											            <ul class="nested" id="nested2">
-											              <li><input type="checkbox" id="third-nest1"><label for="third-nest1">Electronics, IT & Telecomms</label></li>
-											              <li><input type="checkbox" id="third-nest2"><label for="third-nest2">Advanced Systems Architectures</label></li>
-											              <li><input type="checkbox" id="third-nest3"><label for="third-nest3">Artificial Intelligence (AI)</label></li>
-											              <li><input type="checkbox" id="third-nest4"><label for="third-nest4">Computer Games</label></li>
-											              <li><input type="checkbox" id="third-nest5"><label for="third-nest5">Computer Hardware</label></li>
-											              <li><input type="checkbox" id="third-nest6"><label for="third-nest6">Computer Technology/Graphics, Meta Computing</label></li>
-											              <li><input type="checkbox" id="third-nest7"><label for="third-nest7">Simulation</label></li>
-											              <li><input type="checkbox" id="third-nest8"><label for="third-nest8">User Interface, Usability</label></li>
-											            </ul>
-											       	</li>
-										       	</ul>
-									      	</li>  
-									    </ul>
-									</div>
-		    					</div>
-		  					</div>
-						</div>
+							    <ul class="nested" id="first-list2">
+							      <li>
+							      	<span class="caret">
+							      		<input type="checkbox" id="first-nest1">
+							      		<label for="first-nest1">Electronics, IT & Telecomms</label>
+							      	</span>
+							        <ul class="nested">
+							          <li>
+							          	<span class="caret">
+							          		<input type="checkbox" id="second-nest1">
+							          		<label for="second-nest1">Electronis, Microelectronics</label>
+							          	</span>
+							          </li>
+								      <li>
+								      	<span class="caret">
+								      		<input type="checkbox" id="second-nest2">
+								      		<label for="second-nest2">Information Processing & Systems, Workflow</label>
+								      	</span>
+								            <ul class="nested">
+								              <li><input type="checkbox" id="third-nest1"><label for="third-nest1">Electronics, IT & Telecomms</label></li>
+								              <li><input type="checkbox" id="third-nest2"><label for="third-nest2">Advanced Systems Architectures</label></li>
+								              <li><input type="checkbox" id="third-nest3"><label for="third-nest3">Artificial Intelligence (AI)</label></li>
+								              <li><input type="checkbox" id="third-nest4"><label for="third-nest4">Computer Games</label></li>
+								              <li><input type="checkbox" id="third-nest5"><label for="third-nest5">Computer Hardware</label></li>
+								              <li><input type="checkbox" id="third-nest6"><label for="third-nest6">Computer Technology/Graphics, Meta Computing</label></li>
+								              <li><input type="checkbox" id="third-nest7"><label for="third-nest7">Simulation</label></li>
+								              <li><input type="checkbox" id="third-nest8"><label for="third-nest8">User Interface, Usability</label></li>
+								            </ul>
+								          </li>
+							      	  
+							        </ul>
+							      </li>  
+							    </ul>
+							</ul>
+							
+    					</div>
+  					</div>
+				</div>
 							<div class="row">
 								<div class="col-md-12">
 									<label class="knowledge-name">Knowledge</label>
@@ -194,30 +214,31 @@
 $('.checked-interests-container').click(function() {
     $('#tab-content').toggle(100);
 });
+
+$('#main-list1').click(function() {
+    $('#first-list1').toggle(100);
+    $('.nav-link1').toggleClass("link-active");
+});
 $('#main-list2').click(function() {
-    $('.wrap-ul').toggle(100);
+    $('#first-list2').toggle(100);
+    $('.nav-link2').toggleClass("link-active");
+    $('#first-list1').hide(100);
 });
-/*add all checked checkboxes that have .nested class in div with id checked-interests */
-$(function () {
-    var cb = $(".nested input[type='checkbox']");
-    cb.on('click', function () {
-    	$('.checked-interests').addClass('active');
-        var selected = [];
-        cb.each(function () {
-            if (this.checked) {
-                selected.push($(this).next().text());
-            }
-        });
-        $(".checked-interests").text(selected.join(','));
-    });
-});
+</script>
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
 </script>
 <!-- Add Open and Active classes when clicked menu-button to show the right menu -->
 
 	<script type="text/javascript">
-		$(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-});
        $(document).ready(function () {
            $('#menu-icon').on('click', function () {
                $('#sidebar').addClass('active');
@@ -235,5 +256,6 @@ $(function () {
            });
        });
    </script>
+
 </body>
 </html>

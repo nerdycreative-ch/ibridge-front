@@ -2111,33 +2111,30 @@ ul li{
 	display: none;
 }
 #tab-content input[type=checkbox] +label:before{
-	content:"";
-	display:inline-block;
-	width:16px;
-	height:16px;
-	background:#fff;
-	border:1px solid #f5f5f5;
-	border-radius:3px;
-	position:absolute;
-	margin-top:3px;
+	content:"\e903";
+	color:#e5e5e5;
+	font-family:"ibridge-icon";
+	border-radius: 3px;
+	margin-right: 10px;
 }
 #tab-content input[type=checkbox]:checked + label:before{
-	content:"\e912";
-	font-family:'ibridge-icon';
-	color:#fff;
-	font-size:9px;
-	background:#0468BF;
-	padding:3px;
-	line-height:1;
-	border:1px solid #0468BF;
-	border-radius:3px;
+	content:"\e902";
+	background-color:#0468bf;
 }
-#tab-content a{
+#tab-content p{
 	padding: 0px;
+}
+#tab-content-interests{
 	margin-top: 30px;
 }
 #tab-text:-webkit-autofill{
 	background-color: white !important;
+}
+#tab-content p:visited{
+	color: 	#0468bf;
+}
+.link-active{
+	color: #0468bf;
 }
 .wrap-ul{
 	margin-top: 30px;
@@ -2166,9 +2163,6 @@ input:-webkit-autofill:active{
 	border-radius:5px;
 	display: none;
 }
-.active{
-	display: inline-block;
-}
 .caret {
   	cursor: pointer;
  	-webkit-user-select: none; /* Safari 3.1+ */
@@ -2184,7 +2178,21 @@ input:-webkit-autofill:active{
 	background:#ffffff;
 	border-radius:3px;
 	margin-right: 5px;
+	color: black;
+	margin-right: 6px;
+	display: inline-block;
 }
+.caret-down::before {
+	font-family:'ibridge-icon';
+	content: "\e915";
+}
+.nested {
+  display: none;
+}
+.active{
+	display: inline-block;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
