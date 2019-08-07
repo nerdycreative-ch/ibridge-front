@@ -2061,18 +2061,18 @@ input::-webkit-clear-button {
 	font-size: 10px;
 	margin-right: 0px;
 }
-#right-menu-footer{
+@media screen and (min-height: 569px)
+{
+	#right-menu-footer{
 	position: absolute;
 	bottom: 0px;
 }
-@media screen and (max-height: 640px)
+}
+@media screen and (min-height: 1023px)
 {
 	#right-menu-footer{
-		position: relative;
-		margin-top: 45px;
-	}
-	#sidebar{
-		overflow-y: scroll;
+		position: absolute;
+		bottom: 12px;
 	}
 }
 /*
@@ -2111,15 +2111,29 @@ ul li{
 	display: none;
 }
 #tab-content input[type=checkbox] +label:before{
-	content:"\e903";
-	color:#e5e5e5;
+	content:"";
 	font-family:"ibridge-icon";
 	border-radius: 3px;
 	margin-right: 10px;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	border:1px solid #e5e5e5;
+	position:absolute;
+	margin-top:3px;
 }
 #tab-content input[type=checkbox]:checked + label:before{
-	content:"\e902";
+	content:"\e912";
 	background-color:#0468bf;
+	color: #fff;
+	font-family:'ibridge-icon';
+	font-size:9px;
+	padding:3px;
+	line-height:1;
+	width:16px;
+	height:16px;
+	border:1px solid #0468BF;
+	border-radius:3px;
 }
 #tab-content p{
 	padding: 0px;
@@ -2135,6 +2149,9 @@ ul li{
 }
 .link-active{
 	color: #0468bf;
+}
+.nav-link1,.nav-link2{
+	cursor: pointer;
 }
 .wrap-ul{
 	margin-top: 30px;
@@ -2184,19 +2201,18 @@ input:-webkit-autofill:active{
 }
 .caret-down::before {
 	font-family:'ibridge-icon';
-	content: "\e915";
+	content: "\e917";
 }
 .nested {
   display: none;
 }
 .active{
-	display: inline-block;
+	display: block;
 }
-
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     #sidebar.active {
         margin-left: 0;
@@ -2206,9 +2222,6 @@ input:-webkit-autofill:active{
 	.open{
 		margin-left: -45%!important;
 	}
-	#sidebar .sidebar-p{
-	margin-left: 15px;
-}
 }
 @media screen and (min-width: 768px)
 {		/*arrow next icon*/
@@ -2237,6 +2250,9 @@ input:-webkit-autofill:active{
 	}
 	#sidebar{
 		width: 80%;
+	}
+	#sidebar .sidebar-p{
+		margin-left: 15px;
 	}
 }
 @media screen and (max-height: 721px){
