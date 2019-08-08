@@ -44,39 +44,39 @@
                 <div class="col-xl-5 right-panel">
                     <div class="right-form">
                         <section id="loginForm">
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" method="post" action="#">
                                 <h4>Sign up</h4>
                                 <p class="register-link">
                                     or <a href="#">Sign in to continue</a>
                                 </p>
                                 <div class="form-group">
                                     <div class="col-md-12 input">
-                                        <input type="text" class="inputText"/>
+                                        <input type="text" class="inputText" name="firstname" />
                                         <span class="floating-label">First Name</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12 input">
-                                        <input type="text" class="inputText"/>
+                                        <input type="text" class="inputText" name="lastname" />
                                         <span class="floating-label">Last Name</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12 input">
-                                        <input class="inputText" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" type="text" value="" />
+                                        <input class="inputText" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="email" type="text" value="" />
                                         <span class="floating-label">Email address</span>
                                         <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                         <div class="col-md-12 input">
-                                            <input type="password" class="inputText" id="Password"/>
+                                            <input type="password" name="password" class="inputPassword" id="Password"/>
                                             <span class="floating-label">Password</span>
                                             <a class="show-link" onclick="showPassword()">Show</a>
                                         </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Register" class="btn btn-default" />
+                                    <input type="submit" name="submit" value="Register" class="btn btn-default" />
                                 </div>
                             <p class="m-b-0">
                                 By creating an account you confirm that you accept our
@@ -96,7 +96,7 @@
                     <li><a href="#">Community Guidelines</a></li>
                     <li><a href="#">Cookie Policy</a></li>
                     <li><a href="#">Copyright Policy </a></li>
-                    <li><a href="#">2019 iBridge</a></li>
+                    <li><a href="#">2019 &copy; iBridge</a></li>
                 </ul>
             </footer>
         </div>
@@ -115,6 +115,11 @@
                 var n = $(this).val();
                 n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
             });
+            $(".inputPassword").focusout(function() {
+                var n = $(this).val();
+                n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
+            });
+
         </script>
     
     </body>

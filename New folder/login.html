@@ -64,7 +64,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12 input">
-                                    <input class="inputText" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
+                                    <input class="inputPassword" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
                                     <span class="floating-label">Password</span>
                                     <a class="show-link" onclick="showPassword()">Show</a>
                                 </div>
@@ -95,7 +95,7 @@
                 <li><a href="#">Community Guidelines</a></li>
                 <li><a href="#">Cookie Policy</a></li>
                 <li><a href="#">Copyright Policy </a></li>
-                <li><a href="#">2019 iBridge</a></li>
+                <li><a href="#">2019 &copy; iBridge</a></li>
             </ul>
         </footer>
     </div>
@@ -114,6 +114,10 @@
         var n = $(this).val();
         n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
     });
+    $(".inputPassword").focusout(function() {
+        var n = $(this).val();
+        n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
+    });
     </script>
 
     <script src="/bundles/jquery?v=2u0aRenDpYxArEyILB59ETSCA2cfQkSMlxb6jbMBqf81"></script>
@@ -123,7 +127,7 @@
     <script src="/bundles/site?v=fKtjeofAphY3YYVRHMa3RJPcYfCU-aV4IyihqwOvce41"></script>
 
     
-        <script src="/bundles/jqueryval?v=x63JhYAtPoWfuvvzOG4ie0IbeC8KtI5Q_Ln6iJWChUE1"></script>
+    <script src="/bundles/jqueryval?v=x63JhYAtPoWfuvvzOG4ie0IbeC8KtI5Q_Ln6iJWChUE1"></script>
 
     
 

@@ -127,7 +127,7 @@ a:hover {
 .form-group .input {
 	margin-bottom:20px;
 	border:solid 1px #e5e5e5;
-	padding:17px 15px 0px 15px;
+	padding:17px 0px 0px 0px;
 	height:55px;
 	border-radius:5px;
 }
@@ -141,19 +141,25 @@ input:focus ~ .floating-label,
 input:focus {
 	outline:0;
 }
-.inputText {
+.inputText, .inputPassword {
 	font-size:14px;
 	height:35px;
 	border:none;
-	width:87%;
+	width:100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.inputPassword{
+	width: 87%;
 }
 .floating-label {
 	position:absolute;
 	pointer-events:none;
 	left:15px;
-	top:18px;
+	top:16px;
 	transition:0.2s ease all;
 	opacity:0.5;
+	font-size: 14px;
 }
 .show-link {
 	cursor:pointer;
@@ -1883,6 +1889,7 @@ input::-webkit-clear-button {
 	font-family:"HelveticaNeue-Bold";
 	line-height:1.79;
 	margin-top:25px;
+	margin-bottom: 90px;
 }
 .resend-link {
 	background-color:#0468bf;
@@ -2026,7 +2033,7 @@ input::-webkit-clear-button {
 .wrap-right{
 	float: right;
 }
-#sidebar .sidebar-p{
+#sidebar .sidebar-p:not(span){
 	margin-left: 30px;
 }
 #icon-profile-sidebar{
@@ -2061,17 +2068,20 @@ input::-webkit-clear-button {
 	font-size: 10px;
 	margin-right: 0px;
 }
-@media screen and (min-height: 569px)
-{
-	#right-menu-footer{
+#right-menu-footer1{
 	position: absolute;
 	bottom: 0px;
 }
+@media screen and (min-height: 641px)
+{
+	#right-menu-footer{
+		position: absolute;
+		bottom: 0px;
+	}
 }
 @media screen and (min-height: 1023px)
 {
 	#right-menu-footer{
-		position: absolute;
 		bottom: 12px;
 	}
 }
@@ -2088,6 +2098,8 @@ interests_knowledge.html css
 	overflow-y: scroll;
 	margin-bottom: 60px;
 	font-size: 14px;
+	-ms-overflow-style:none; /*hide interests div scroll bars on InternetExplorer*/
+	scrollbar-width: none; /*hide interests div scroll bars on Firefox*/
 }
 ul li{
 	list-style: none;
@@ -2102,9 +2114,27 @@ ul li{
 #tab-text{
 	border: none;
 	width: 100%;
-	margin-bottom: 14px;
+    margin-bottom: 15px;
+    margin-top: -15px;
 }
-#tab-text::placeholder{
+/*
+remove blue border/box-shadow of input text on all browsers
+*/
+#tab-text:focus, #tab-text:active{
+    box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none;
+}
+/*
+centered input text placeholder on all browsers
+*/
+#tab-text::-webkit-input-placeholder{
+	text-align: center;
+}
+#tab-text::-moz-placeholder{
+	text-align: center;
+}
+#tab-text:-ms-input-placeholder{
 	text-align: center;
 }
 #tab-content input[type="checkbox"]{
@@ -2162,7 +2192,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
-  -webkit-box-shadow: 0 0 0px 100px #fff inset;
+  -webkit-box-shadow: 0 0 0px 100px #fff inset!important;
 
 }
 .checked-interests-container{
@@ -2252,7 +2282,7 @@ input:-webkit-autofill:active{
 		width: 80%;
 	}
 	#sidebar .sidebar-p{
-		margin-left: 15px;
+		margin-left: 15px!important;
 	}
 }
 @media screen and (max-height: 721px){
