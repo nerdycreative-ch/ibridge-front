@@ -57,7 +57,7 @@
                     <div class="contents-help">
                         <ul>
                             <li><button class="caret"><span class="offset-1">Question 1</span></button></li>
-                            <li class="li-nested nested">
+                            <li class="li-nested nested offset-1">
                                 <p class="about-description">Lorem ipsum dolor sit amet, odio reque disputando cu quo, qualisque elaboraret appellantur ius no. Commodo denique id vel, unum deseruisse an usu. Mazim omnes suavitate id ius. Mel at atqui rationibus philosophia, vim albucius apeirian an, ut pri eruditi veritus. Cu nam latine constituam, vel principes delicatissimi in. Quo ut brute soleat definitionem, veri graeco id mea, an qui hinc iudico posidonium. 
                                 Eam odio appareat atomorum eu, has in nemore deterruisset. Reque nulla adipisci mea ei. Minim habemus invidunt ex duo. Has te solum viris intellegam, ea mea quas dolores appellantur, noster accusamus ei mea. Eu aperiri imperdiet per. Doming facilis mediocrem ex vel, duo postea tincidunt eu, nisl errem vocent ei duo.</p>
                             </li>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 offset-lg-2 clr-white subscrb">
                         <p class="second-lead">NEWSLETTER</p>
-                        <p>Join our subscribes list to get latest news and updates directly in your inhelp-img-txt.</p>
+                        <p>Join our subscribes list to get latest news and updates directly in your inbox.</p>
                         <input class="email-subscribe" placeholder="Email address"><span><i class="icon-ib-profile"></i></span>
                     </div>
                 </div><!-- .row -->
@@ -172,7 +172,8 @@
     $('.caret').click(function(){
         var m = $(this);
         var n = m.closest("ul").find(".li-nested");
-        n.toggleClass("nested offset-1");
+        n.toggleClass("nested");
+        m.toggleClass("caret-down");
     });
     </script>
 </html>

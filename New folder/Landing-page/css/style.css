@@ -161,6 +161,7 @@ body{
     width:100px;
     border:1.5px solid #0468bf;
     margin:60px 0 45px -15px;
+    text-align: left; /*for IE users*/
 }
 .square-simplicity{
     margin: 0;
@@ -350,7 +351,7 @@ body{
 .bg-color{
     background-color: #062540;
     content:"";  
-    width:calc(100vw - 45px);
+    width: 97%;
     height: fit-content;
     left:0;
     padding: 120px 0;
@@ -531,7 +532,7 @@ body{
         transform: translateY(0%);
     }
     #header-hr{
-        margin-left:0;
+        margin-left:0!important;
     }
     .no-project-txt{
         font-size:13px;
@@ -821,7 +822,7 @@ body{
 }
 
 .image-page img:first-of-type{
-    width: 93%;
+    width: 94%;
     height: 350px;
     object-fit: cover;
 }
@@ -1041,6 +1042,9 @@ body{
     padding-left:18px;
     margin-bottom:60px;
 }
+.less-mrg + ul > li {
+    margin-bottom:10px;
+}
 /*
     ==============================
         5. Blog Page
@@ -1052,7 +1056,7 @@ body{
     line-height: 1.56;
     color: rgba(6, 6, 9, 0.5);
 }
-.blog-section .date-published{
+.blog-section .date-published, .blog-details-section .date-published{
     margin-top: 130px;
     margin-bottom: 30px;
 }
@@ -1079,11 +1083,11 @@ body{
 }
 
 .blog-img-txt {
-    width: 93%;
+    width: 94%;
     margin: auto;
-    height: 525 px;
+    height: 525px;
     position: relative;
-  }
+}
 .blog-img-txt img{
     width: 100%;
     height: 525px;
@@ -1119,23 +1123,33 @@ body{
 }
 .blog-img{
     width: 100%;
-    height: 325px;
-    object-fit: contain;
-    /* margin-bottom:60px; */
+    height: auto;
+    object-fit: cover;
 }
-.latest-posts .date-published, .latest-posts-txt{
+.latest-posts .blog-img{
+    height: 100%;
+}
+.latest-posts .date-published, .latest-posts .latest-posts-txt{
     margin-bottom: 30px;
 }
-.latest-posts .simple-text:not(:last-of-type){
+.latest-posts .simple-text{
     margin-bottom:45px;
+}
+.latest-posts a{
+    text-decoration: none;
+    color: inherit;
+}
+.latest-posts a:focus{
+    text-decoration: none;
+    color: inherit;
 }
 .posts{
     margin-bottom: 60px;
 }
-.swipe-posts{
+.latest-posts .swipe-posts{
     margin: 90px 0 180px;
 }
-.swipe-posts-button{
+.latest-posts .swipe-posts-button{
     width: 30px;
     height: 40px;
     border-radius: 5px;
@@ -1146,15 +1160,32 @@ body{
     vertical-align: middle;
     margin-right: 15px;
 }
-.swipe-posts-button .icon-ib-arrow-next{
+.latest-posts .icon-ib-arrow-next{
     font-size: 10px;
-}.swipe-posts-button:first-of-type{
+}
+.swipe-posts-button:first-of-type{
     transform:rotate(180deg);
 }
 .swipe-posts-button:focus, .swipe-posts-button:hover, .swipe-posts-button:active{
     background-color: #0468bf;
 }
-
+.page-blog-img .swipe-buttons{
+    float: right;
+    position: relative;
+    right: 3.3%;
+    transform: translateY(-50%);
+}
+.page-blog-img .swipe-posts-button{
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: #0468bf;
+    color: white;
+    border: none;
+}
+.page-blog-img .swipe-posts-button i{
+    font-size: 15px;
+}
 /*
     ==============================
         5. Blog Details
@@ -1177,6 +1208,15 @@ body{
 .post-info .titles > .simple-text:last-of-type{
     margin-bottom: 90px;
 }
+.recent-posts{
+    margin-bottom:150px;
+}
+.recent-posts .blog-img, .recent-posts .date-published, .recent-posts .latest-posts-txt{
+    margin-bottom:30px;
+}
+.recent-posts #header-hr{
+    margin: 30px 0 60px -15px;
+}
 /*
     ==============================
         3.1 MediaQueries About
@@ -1192,9 +1232,8 @@ body{
     }
     .dots-about{
         width:40%;
-        height: unset;
+        height: auto;
         margin-top: -40%;
-        left:unset;
         left:15%;
     }
     .about-section{
