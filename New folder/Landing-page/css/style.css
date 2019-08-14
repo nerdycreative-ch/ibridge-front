@@ -418,6 +418,12 @@ body{
     line-height: 1.79;
     float: right;
     margin: 14px 0;
+    text-align: center;
+}
+.join-platform:hover{
+    color: inherit;
+    font-size: inherit;
+    text-align: center;
 }
 .sign-up-footer .bg-color{
     width:100%;
@@ -1135,13 +1141,10 @@ body{
 .latest-posts .simple-text{
     margin-bottom:45px;
 }
-.latest-posts a{
+a, a:focus, a:visited{
     text-decoration: none;
     color: inherit;
-}
-.latest-posts a:focus{
-    text-decoration: none;
-    color: inherit;
+    cursor: pointer;
 }
 .posts{
     margin-bottom: 60px;
@@ -1168,6 +1171,7 @@ body{
 }
 .swipe-posts-button:focus, .swipe-posts-button:hover, .swipe-posts-button:active{
     background-color: #0468bf;
+    color: #fff;
 }
 .page-blog-img .swipe-buttons{
     float: right;

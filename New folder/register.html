@@ -9,7 +9,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
 </head>
 </body>
 <body>
@@ -43,7 +42,14 @@
                 </div>
                 <div class="col-xl-5 right-panel">
                     <div class="right-form">
-                        <section id="loginForm">
+                        <section id="loginForm">                
+                            <div id="error-password">
+                                <p>Password
+                                <i class="icon-ib-close" id="close-popup-icon" style="float: right; font-size:10px;"></i></p>
+                                <p>- Passwords must have at least one non letter or digit character.</p>
+                                <p>- Passwords must have at least one lowercase (‘a’-‘z’).</p>
+                                <p>- Passwords must have at least one uppercase (‘A’-‘Z’)</p>                  
+                            </div>
                             <form class="form-horizontal" method="post" action="#">
                                 <h4>Sign up</h4>
                                 <p class="register-link">
@@ -63,12 +69,11 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12 input">
-                                        <input class="inputText" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="email" type="text" value="" />
+                                        <input class="inputText" data-val="true" data-val-email="Enter a valid e-mail address." data-val-required="The Email field is required." id="Email" name="email" type="text" value="" required/>
                                         <span class="floating-label">Email address</span>
-                                        <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="form-group-last-input">
                                         <div class="col-md-12 input">
                                             <input type="password" name="password" class="inputPassword" id="Password"/>
                                             <span class="floating-label">Password</span>
@@ -121,7 +126,23 @@
             });
 
         </script>
-    
+    <!-- Hide Password Error(information) when clicked the close button (X) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#close-popup-icon').on('click', function(){
+            $('#error-password').addClass('hide-error');
+        });
+    });
+        /*add red border if input is entered wrong*/
+        $(document).ready(function(){
+        if ($(".text-danger").hasClass("field-validation-error")) {
+        $(".text-danger").parent().css({"border": "1px solid #ff3636"});
+    }
+        });
+        
+    </script>
+
     </body>
     
 </html>
