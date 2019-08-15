@@ -9,6 +9,74 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <style type="text/css">
+/*----------------------------------
+    Error entered input
+----------------------------------*/
+
+#error-password{
+    border-radius: 5px;
+    background-color: #ff3636;
+    left:0;
+    right:0;
+    position: absolute;
+    padding: 10px;
+    margin: -30px 60px 0px 60px;
+    z-index: 1;
+    color: #fff!important;    
+    font-size: 12px;
+}
+/* Error Tool Tip Styles*/
+.field-validation-error {
+  font-size:40px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  /* positioning */
+  float: left;
+  position: relative;
+  padding: 7px 11px 4px;
+  margin-left: 10px; /* distance between error tip and element it points to */
+}
+.field-border-error{
+    border: 1px solid red;
+}
+/* Left Arrow Styles */
+.field-validation-error:after{
+  content: '';
+  border: 7px solid transparent;
+  position: absolute;
+  top: -14px;
+  border-bottom: 7px solid  #ff3636;
+  right:30px;
+}
+#error-password p{
+    margin: 0px;
+}
+#error-password p:first-child{
+    font-size: 14px;
+}
+.field-validation-error{
+    background-color: #ff3636;
+    color: white!important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+    z-index: 1;
+    font-size: 12px;
+}
+/*to hide div when X button is clicked*/
+.hide-error{
+    display: none;
+}
+#close-popup-icon{
+    float: right; 
+    font-size:10px;
+}
+
+    </style>
 </head>
 </body>
 <body>
@@ -45,7 +113,7 @@
                         <section id="loginForm">                
                             <div id="error-password">
                                 <p>Password
-                                <i class="icon-ib-close" id="close-popup-icon" style="float: right; font-size:10px;"></i></p>
+                                <i class="icon-ib-close" id="close-popup-icon"></i></p>
                                 <p>- Passwords must have at least one non letter or digit character.</p>
                                 <p>- Passwords must have at least one lowercase (‘a’-‘z’).</p>
                                 <p>- Passwords must have at least one uppercase (‘A’-‘Z’)</p>                  
@@ -71,12 +139,14 @@
                                     <div class="col-md-12 input">
                                         <input class="inputText" data-val="true" data-val-email="Enter a valid e-mail address." data-val-required="The Email field is required." id="Email" name="email" type="text" value="" required/>
                                         <span class="floating-label">Email address</span>
+                                        <span class="text-danger field-validation-error" data-valmsg-for="Email" data-valmsg-replace="true"><span id="Email-error" class="">Enter a valid e-mail address.</span></span>
                                     </div>
                                 </div>
                                 <div class="form-group" id="form-group-last-input">
                                         <div class="col-md-12 input">
                                             <input type="password" name="password" class="inputPassword" id="Password"/>
                                             <span class="floating-label">Password</span>
+                                            <span class="text-danger field-validation-error" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"><span id="ConfirmPassword-error">The Password must be at least 6 characters long.</span></span>
                                             <a class="show-link" onclick="showPassword()">Show</a>
                                         </div>
                                 </div>

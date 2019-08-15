@@ -98,9 +98,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6" id="profile-menu">
-						<span><a href="#">Overview</a></span>
-						<span><a href="#">Impact</a></span>
-						<span><a href="#">Publications</a></span>
+						<span class="active1"><a href="#overview-tab">Overview</a></span>
+						<span><a href="#impact-tab">Impact</a></span>
+						<span><a href="#publications-tab">Publications</a></span>
 					</div>
 					<div class="col-md-6">	
 						<div class="desktop-show">
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row"id="overview">
+			<div class="row tab active1" id="overview-tab">
 				<div class="col-md-8">
 					<p class="titles">Editorships<button><i class="icon-ib-plus"></i>ADD</button></p>
 					<div id="editorships">
@@ -192,6 +192,12 @@
 					<a href="#">Connect your Scopus author ID</a>
 				</div>
 			</div>
+			<div class="titles tab" id="impact-tab">
+				Impact Content
+			</div>
+			<div class="titles tab" id="publications-tab">
+				Publications Content
+			</div>
 		</div>
 	</div>
 		<!------------------footer----------------------->
@@ -245,6 +251,29 @@ function showText() {
                $('footer').removeClass('open');
            });
        });
-   </script> 
+   </script>
+
+   <!--
+   	show its tab content on tab click 
+   	tabs: Overview, Impact, Publications
+   	-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+          	 $("#profile-menu span a").click(function(e){
+                e.preventDefault();
+            });
+
+            $("#profile-menu span").click(function(){
+                var tabid = $(this).find("a").attr("href");
+                $("#profile-menu span, .container div.tab").removeClass("active1");   // removing active class from tab and tab content
+                $(".tab").hide();   // hiding open tab
+                $(tabid).show();    // show tab
+                $(this).addClass("active1"); //  adding active class to clicked tab
+
+            });
+
+        });
+    </script>
 </body>
 </html>

@@ -149,8 +149,8 @@ input:focus {
 	height:35px;
 	border:none;
 	width:100%;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 14px;
+	padding-right: 14px;
 	background: initial;
 }
 .inputPassword{
@@ -244,7 +244,7 @@ input:focus {
 		margin-right:20px;
 	}
 }
-.external-login a:first-child {
+.external-login a:not(:last-child){
 	margin-bottom:15px;
 }
 /*full-width footer*/
@@ -314,6 +314,11 @@ footer li a{
 	line-height:0.96;
 	text-align:left;
 	color:#060609;
+}
+.form-horizontal .input{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-bottom: 20px;
 }
 @media(max-width:1500px) {
 	.right-form {
@@ -438,11 +443,71 @@ footer li a{
 		transform:translateY(0%);
 	}
 	/*register.html*/
-	#error-password{
-        margin-right: 30px;
-        margin-left: 30px;
-        margin-top: -50px;
-    }
+/*----------------------------------
+    Error entered input
+----------------------------------*/
+
+#error-password{
+    border-radius: 5px;
+    background-color: #ff3636;
+    left:0;
+    right:0;
+    position: absolute;
+    padding: 10px;
+    margin: -30px 60px 0px 60px;
+    z-index: 1;
+    color: #fff!important;    
+    font-size: 12px;
+}
+/* Error Tool Tip Styles*/
+.field-validation-error {
+  font-size:40px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  /* positioning */
+  float: left;
+  position: relative;
+  padding: 7px 11px 4px;
+  margin-left: 10px; /* distance between error tip and element it points to */
+}
+.field-border-error{
+    border: 1px solid red;
+}
+/* Left Arrow Styles */
+.field-validation-error:after{
+  content: '';
+  border: 7px solid transparent;
+  position: absolute;
+  top: -14px;
+  border-bottom: 7px solid  #ff3636;
+  right:30px;
+}
+#error-password p{
+    margin: 0px;
+}
+#error-password p:first-child{
+    font-size: 14px;
+}
+.field-validation-error{
+    background-color: #ff3636;
+    color: white!important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+    z-index: 1;
+    font-size: 12px;
+}
+/*to hide div when X button is clicked*/
+.hide-error{
+    display: none;
+}
+#close-popup-icon{
+    float: right; 
+    font-size:10px;
+}
 	footer {
 		bottom:0px;
 		position: relative;
@@ -850,13 +915,12 @@ input[type="radio"] {
 /*Second Profile Header*/
 
 #profile-menu span {
-	padding-right:47px;
+	margin-right:47px;
 	line-height:3.4;
 	font-size:14px;
 }
 #profile-nav {
-	padding-top:16px;
-	padding-bottom:16px;
+	padding-top:14px;
 	background-color:#fff;
 	margin-right:0px;
 	box-shadow:0 4px 4px 0 rgba(0,
@@ -871,9 +935,9 @@ input[type="radio"] {
 	9,
 	0.7);
 }
-#profile-menu a:hover {
+#profile-menu span.active1 {
 	border-bottom:2px solid #0468bf;
-	padding-bottom:31px;
+	padding-bottom: 13px;
 	color:#060609;
 }
 /*******Profile Button and More(...) ( profile content )********/
@@ -890,7 +954,7 @@ input[type="radio"] {
 	color:#fff;
 	padding:9px 22px;
 }
-#overview {
+#overview-tab {
 	color:#060609;
 	font-size:18px;
 }
@@ -901,6 +965,9 @@ input[type="radio"] {
 	margin-left:14px;
 	height:42px;
 	width:42px;
+}
+.active1{
+    display:inline-block !important;
 }
 /****************Content******************/
 
@@ -962,7 +1029,7 @@ input[type="radio"] {
 	font-size:16px;
 	color:#0468bf;
 }
-#overview button {
+#overview-tab button {
 	float:right;
 	border-radius:5px;
 	border:solid 1px #e5e5e5;
@@ -971,12 +1038,12 @@ input[type="radio"] {
 	color:#0468bf;
 	padding:5px 14px 5px 14px;
 }
-#overview button i {
+#overview-tab button i {
 	padding-right:10px;
 	color:#0468bf;
 	font-size:14px;
 }
-#overview i {
+#overview-tab i {
 	font-size:35px;
 	color:rgba(6,
 	6,
@@ -1141,6 +1208,9 @@ input[type="radio"] {
 .url,
 .upload,
 .investor-id,
+.entrepreneur-id,
+.student-id,
+.research-id
 .start,
 .end,
 .budget,
@@ -1159,6 +1229,8 @@ input[type="radio"] {
 	margin-bottom:30px;
 }
 #investor-id,
+#entrepreneur-id,
+#student-id,
 #first-name,
 #last-name,
 #email {
@@ -1279,6 +1351,11 @@ input[type="radio"] {
 	margin-right:45px;
 	display:inline;
 	line-height:1.71;
+}
+@media screen and (max-width: 320px){
+	.describe{
+		margin-right: 24px;
+	}
 }
 #describes-row {
 	margin-bottom:30px;
