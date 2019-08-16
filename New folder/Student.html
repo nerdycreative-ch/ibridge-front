@@ -107,7 +107,7 @@
 					<div class="row">
 							<div class="col-md-6">
 							<label class="date-of-birth"> Date of birth</label>
-							<input class="form-control" name="birthday" id="birthday" type="date"  placeholder="dd/mm/yyyy" />
+							<input class="form-control date" name="birthday" id="birthday" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" />
 							</div>
 							<div class="col-md-6">
 							<label class="email-address">Email Address</label>
@@ -282,8 +282,13 @@
 						<div class="row">
 							<div class="col-md-12">
 								<label class="upload">Upload</label>
-								
+								<div class="" draggable='true'>
+									<div id='dropzone' class='dropzone'>
+										<p>Drop file here</p>
+									</div>
+								</div>	
 							</div>
+							
 						</div>
 						<div class="row">
 							<div class="col-md-12">
@@ -311,13 +316,13 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6">
-							<label class="from">From</label>
-							<input class="form-control" name="from" id="from" type="date" pattern="\d{1,2}/\d{1,2}/\d{4}" required/>
-						</div>
-						<div class="col-md-6">
-							<label class="to">To</label>
-							<input class="form-control" name="to" id="to" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
-						</div>
+								<label class="start">Start</label>
+								<input class="form-control date" placeholder = "dd/mm/yyyy" class = "textbox-n" type = "text" onfocus = "(this.type = 'date')"  id = "date">
+							</div>
+							<div class="col-md-6">
+								<label class="end">End</label>
+								<input class="form-control date" placeholder = "dd/mm/yyyy" class = "textbox-n" type = "text" onfocus = "(this.type = 'date')"  id = "date">	
+							</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
@@ -543,6 +548,95 @@
 			</ul>
 		</footer>
 	</div>
+<script type="text/javascript">
+	var dropzone = $('#dropzone')
+
+
+dropzone.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  })
+
+dropzone.on('dragover dragenter', function() {
+    $(this).addClass('is-dragover');
+  })
+dropzone.on('dragleave dragend drop', function() {
+    $(this).removeClass('is-dragover');
+  })  
+  
+dropzone.on('drop',function(e) {
+	var files = e.originalEvent.dataTransfer.files;
+	// Now select your file upload field 
+	// $('input_field_file').prop('files',files)
+  });</script>
+		<!-- SUMMERNOTE -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+	<script type="text/javascript">  
+		/* Popover initiate */
+        $(document).ready(function () {  
+            $('[data-toggle="popover"]').popover();  
+        });  
+		/* remove popover redirection on click */
+		$( ".describe a" ).on( "click", function(e) {
+			e.preventDefault();
+		});
+
+		  
+		
+		function registerSummernote(element, placeholder, max, callbackMax) {
+			$(element).summernote({
+				height:138,
+				toolbar: [
+					['style', ['bold', 'italic', 'underline']],
+					['para', ['ol','ul']]
+				],
+				placeholder,
+				popover: {
+					image: [],
+					link: [],
+					air: []
+				},
+				callbacks: {
+				
+					onKeydown: function(e) {
+					var t = e.currentTarget.innerText;
+						if (t.trim().length >= max) {
+							//delete key
+							if (e.keyCode != 8)
+								e.preventDefault();
+								// add other keys ...
+						}
+					},
+					onKeyup: function(e) {
+						var t = e.currentTarget.innerText;
+						if (typeof callbackMax == 'function') {
+							callbackMax(t.trim().length);
+						}
+					},
+					onPaste: function(e) {
+						var t = e.currentTarget.innerText;
+						var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+						e.preventDefault();
+						var all = t + bufferText;
+						document.execCommand('insertText', false, all.trim().substring(0, 500));
+						if (typeof callbackMax == 'function') {
+							callbackMax(max - t.length);
+						}
+					}
+				}
+				
+			});
+		}
+		/* get html content from summernote */
+		var markupStr = $('#summernote').summernote('code');
+		/* dispaly char-count */
+		$(function(){
+			registerSummernote('.summernote', '', 500, function(max) {
+				$('#maxContentPost').text(max)
+			});
+		});
+
+	</script>  
 	<script>
 		var x, i, j, selElmnt, a, b, c;
 		/*look for any elements with the class "custom-select":*/

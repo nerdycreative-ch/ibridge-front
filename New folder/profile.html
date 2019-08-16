@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row tab active1" id="overview-tab">
+			<div class="row tab" id="overview-tab">
 				<div class="col-md-8">
 					<p class="titles">Editorships<button><i class="icon-ib-plus"></i>ADD</button></p>
 					<div id="editorships">
@@ -179,23 +179,23 @@
 				</div>
 				<div class="col-md-4" id="right-content">
 					<div class="desktop-show">
-					<p class="titles">About me</p>
-					<p class="info">Lorem ipsum dolor sit amet, sed in eligendi honestatis persequeris, eu his viderer quaeque diceret. Blandit eloquentiam vis ut, ex munere patrioque mnesarchum eos, no vero interesset vix. </p>
-					</div>
-					<p class="titles">Groups</p>
-					<p class="info"><a href="#">Join a public group <br></a>to follow discussion in your niche</p>
+						<p class="titles">About me</p>
+						<p class="info">Lorem ipsum dolor sit amet, sed in eligendi honestatis persequeris, eu his viderer quaeque diceret. Blandit eloquentiam vis ut, ex munere patrioque mnesarchum eos, no vero interesset vix. </p>
+						</div>
+						<p class="titles">Groups</p>
+						<p class="info"><a href="#">Join a public group <br></a>to follow discussion in your niche</p>
 
-					<p class="titles">Other IDs</p>
-					<p class="info">ORCID</p>
-					<a href="#">Create of connect your ORCID ID</a>
-					<p class="info">Scopus</p>
-					<a href="#">Connect your Scopus author ID</a>
+						<p class="titles">Other IDs</p>
+						<p class="info">ORCID</p>
+						<a href="#">Create of connect your ORCID ID</a>
+						<p class="info">Scopus</p>
+						<a href="#">Connect your Scopus author ID</a>
 				</div>
 			</div>
-			<div class="titles tab" id="impact-tab">
+			<div class="titles tab second" id="impact-tab">
 				Impact Content
 			</div>
-			<div class="titles tab" id="publications-tab">
+			<div class="titles tab second" id="publications-tab">
 				Publications Content
 			</div>
 		</div>
@@ -263,7 +263,7 @@ function showText() {
           	 $("#profile-menu span a").click(function(e){
                 e.preventDefault();
             });
-
+          	$(".second").hide();
             $("#profile-menu span").click(function(){
                 var tabid = $(this).find("a").attr("href");
                 $("#profile-menu span, .container div.tab").removeClass("active1");   // removing active class from tab and tab content

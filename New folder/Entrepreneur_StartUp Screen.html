@@ -110,7 +110,7 @@
 					<div class="row">
 							<div class="col-md-6">
 							<label class="date-of-birth"> Date of birth</label>
-							<input class="form-control" name="birthday" id="birthday" type="date"  placeholder="dd/mm/yyyy" />
+							<input class="form-control date" name="birthday" id="birthday" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" />
 							</div>
 							<div class="col-md-6">
 							<label class="email-address">Email Address</label>
@@ -291,11 +291,11 @@
 					<div class="row" id="start-end">
 							<div class="col-md-6">
 								<label class="start">Start</label>
-								<input class="form-control" name="start" id="start" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+								<input class="form-control date" placeholder = "dd/mm/yyyy" class = "textbox-n" type = "text" onfocus = "(this.type = 'date')"  id = "date">
 							</div>
 							<div class="col-md-6">
 								<label class="end">End</label>
-								<input class="form-control" name="end" id="end" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+								<input class="form-control date" placeholder = "dd/mm/yyyy" class = "textbox-n" type = "text" onfocus = "(this.type = 'date')"  id = "date">	
 							</div>
 					</div>
 
@@ -526,5 +526,12 @@
            });
        });
    </script>
+    <script>
+    $(".inputDate").focusout(function() {
+        var n = $(this).val();
+        n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
+    });
+    </script>
+
 </body>
 </html>

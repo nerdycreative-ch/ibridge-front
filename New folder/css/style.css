@@ -144,6 +144,28 @@ input:focus ~ .floating-label,
 input:focus {
 	outline:0;
 }
+.dropzone {
+	height: 92px;
+	border: 1px dashed #e5e5e5;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+.dropzone p{
+	text-align: center;
+	line-height: 92px;
+	color: #060606;
+	opacity: 0.5;
+}
+.dropzone.is-dragover {
+  background-color: #e6ecef;
+}
+
+.dragover {
+	bg-color: red;
+}
+.form-control.date:focus ~ .floating-label.date{
+	display: none;
+}
 .inputText, .inputPassword {
 	font-size:14px;
 	height:35px;
@@ -152,6 +174,11 @@ input:focus {
 	padding-left: 14px;
 	padding-right: 14px;
 	background: initial;
+}
+.floating-label.date{
+	padding-right: 12px;
+	padding-left: 12px;
+	top: 44.5px;
 }
 .inputPassword{
 	width: 87%;
@@ -232,15 +259,23 @@ input:focus {
 	line-height:0;
 }
 .facebook,
-.linkedin {
+.linkedin,
+.google,
+.orcid {
 	width:18px;
 	height:18px;
 	margin-right:44px;
 	margin-left:20px;
 }
+/*input[type="date" i]::place-holder{
+	color: #060609;
+	opacity: 0.5;
+}*/
 @media screen and (max-width: 321px) {
 	.facebook,
-	.linkedin {
+	.linkedin,
+	.google,
+	.orcid {
 		margin-right:20px;
 	}
 }
@@ -1210,7 +1245,7 @@ input[type="radio"] {
 .investor-id,
 .entrepreneur-id,
 .student-id,
-.research-id
+.research-id,
 .start,
 .end,
 .budget,
@@ -1747,6 +1782,9 @@ input::-webkit-clear-button {
 ::-ms-clear,
 ::-ms-reveal{
 	display: none;
+}
+.edge-autoSuggestFieldFilled{
+	background-color: none!important; /*remove background color from input*/
 }
 /* Dropdown */
 
