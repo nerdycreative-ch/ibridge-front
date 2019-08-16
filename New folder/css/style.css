@@ -794,12 +794,12 @@ button:active{
 input[type="radio"] {
 	display:none;
 }
-.categories-and-subcategories ~ label:before {
+.categories ~ label:before, .subcategories ~ label:before {
 	content:"\e90e";
 	color:#e5e5e5;
 	font-family:"ibridge-icon";
 }
-.categories-and-subcategories:checked ~ label:before {
+.categories:checked ~ label:before,.subcategories:checked ~ label:before {
 	content:"\e90d";
 	background-color:#0468bf;
 	border-radius:50%;
