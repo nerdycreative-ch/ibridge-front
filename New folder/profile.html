@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -195,7 +196,7 @@
 			<div class="titles tab second" id="impact-tab">
 				Impact Content
 			</div>
-			<div class="titles tab second" id="publications-tab">
+			<div class="titles tab third" id="publications-tab">
 				Publications Content
 			</div>
 		</div>
@@ -233,22 +234,18 @@ function showText() {
 }
 </script>
      <script type="text/javascript">
+     	/* when right menu is open, the content is placed left*/
        $(document).ready(function () {
            $('#menu-icon').on('click', function () {
                $('#sidebar').addClass('active');
-               $('#container-fluid').addClass('open');
-               $('.logo').addClass('open');
-               $('.profile-content').addClass('open');
-               $('footer').addClass('open');
+               $('#container-fluid, .logo, .profile-content, #overview-tab, footer').addClass('open');
            });
        });
+       /* when right menu is closed the content is back in its place*/
        $(document).ready(function () {
            $("#close-icon").on('click', function(){
                $('#sidebar').removeClass('active');
-               $('#container-fluid').removeClass('open');
-               $('.logo').removeClass('open');
-               $('.profile-content').removeClass('open');
-               $('footer').removeClass('open');
+               $('#container-fluid, .logo, .profile-content, #overview-tab, footer').removeClass('open');
            });
        });
    </script>
@@ -263,7 +260,7 @@ function showText() {
           	 $("#profile-menu span a").click(function(e){
                 e.preventDefault();
             });
-          	$(".second").hide();
+          	$(".second, .third").hide();
             $("#profile-menu span").click(function(){
                 var tabid = $(this).find("a").attr("href");
                 $("#profile-menu span, .container div.tab").removeClass("active1");   // removing active class from tab and tab content
