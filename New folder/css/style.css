@@ -769,6 +769,7 @@ button:active{
 	}
 	.subcategory span {
 		padding-left:10px;
+	/*	padding-left: 21px; for backend fix*/
 	}
 	.category span {
 		position:absolute;
@@ -779,16 +780,22 @@ button:active{
 @media screen and (min-width: 1025px) {
 	.subcategory span {
 		padding-left:10px;
+	/*	padding-left: 21px; for backend fix*/
 	}
 }
 @media screen and (max-width: 767px) {
 	.category span {
 		padding-left:10px;
+	/*	padding-left: 21px; for backend fix*/
 		display:inline;
 	}
 	.subcategory{
 		width: 100%;
 	}
+/*	 .subcategory span{		
+        padding-left: 24px;		
+    }
+    for backend fix*/
 }
 @media screen and (max-width: 768px) {
 	#menu-icon, #close-icon {
@@ -1215,44 +1222,9 @@ input[type="radio"] {
 	text-align:left;
 	color:#060609;
 }
-.first-name,
-.last-name,
-.date-of-birth,
-.email-address,
-.name-of-institution,
-.address,
-.company-website-url,
-.institution-website-url,
-.personal-website-url,
-.linkedin-url,
-.phone-number,
-.business-unit-name,
-.function,
-.research-unit-name,
+.custom-label,
 .interests,
-.what-describes-you-better,
-.min-max-char,
-.date-employment,
-.from,
-.to,
-.position,
-.institution-name,
-.orcid-id,
-.researcher-id,
-.date-award,
-.country,
-.institution,
-.title,
-.url,
-.upload,
-.investor-id,
-.entrepreneur-id,
-.student-id,
-.research-id,
-.start,
-.end,
-.budget,
-.description,
+.partner-id,
 /*interests_knowledge.html*/
 .interests-name,
 .knowledge-name {
@@ -1271,7 +1243,8 @@ input[type="radio"] {
 #student-id,
 #first-name,
 #last-name,
-#email {
+#email,
+#partner-id {
 	opacity:0.5;
 	background-color:#f5f5f5;
 }
@@ -1279,9 +1252,7 @@ input[type="radio"] {
 
 #companies-col {
 	padding-right:0px;
-}
-.companies {
-	margin-bottom:30px;
+	margin-bottom: 30px;
 }
 .company {
 	font-size:14px;
@@ -1746,34 +1717,7 @@ label {
 #email,
 #researcher-id {
 	opacity:0.5;
-	background-color:#f5f5f5;
-}
-/* Publications, Emplolyment, Degrees, Awards, Research grants */
-
-.publications,
-.employment,
-.degrees-earned,
-.awards-received,
-.research-grants {
-	font-size:18px;
-	font-family:"HelveticaNeue-Bold";
-	text-align:left;
-	color:#060609;
-	margin-top:30px;
-	margin-bottom:30px;
-}
-/* Awards recieved */
-
-.forms {
-	width:auto;
-	height:auto;
-	border-radius:10px;
-	box-shadow:0 8px 28px 0 rgba(0,
-	0,
-	0,
-	0.08);
-	padding:30px;
-	margin-bottom:30px;
+	background-color:#f5f5f;
 }
 /*clear button (X) and spin(up and down) hidden on input DATE and TEXT*/
 

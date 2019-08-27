@@ -98,29 +98,29 @@
 				<form action="#" method="POST">
 					<div class="row">
 							<div class="col-md-6">
-								<label class="first-name">First name</label>
+								<label class="custom-label">First name</label>
 								<input class="form-control" name="first-name" id="first-name" type="text" placeholder="John" disabled />
 							</div>
 							<div class="col-md-6">
-								<label class="last-name">Last name</label>
+								<label class="custom-label">Last name</label>
 								<input class="form-control" name="last-name" id="last-name" type="text" disabled />
 							</div>
 					</div>
 
 					<div class="row">
 							<div class="col-md-6">
-							<label class="date-of-birth"> Date of birth</label>
-							<input class="form-control" name="birthday" id="birthday" type="date"  placeholder="dd/mm/yyyy" />
+							<label class="custom-label"> Date of birth</label>
+							<input class="form-control date" name="birthday" id="birthday" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" />
 							</div>
 							<div class="col-md-6">
-							<label class="email-address">Email Address</label>
+							<label class="custom-label">Email Address</label>
 							<input class="form-control" name="email" id="email" type="email" disabled />
 							</div>
 					</div>
 
 					<div class="row">
 						<div class="col-md-12">
-								<label class="name-of-institution">Name of the institution</label>
+								<label class="custom-label">Name of the institution</label>
 								<input class="form-control" name="institution" id="institution" type="text" />
 						</div>
 					</div>
@@ -138,37 +138,37 @@
 
 					<div class="row">
 							<div class="col-md-12">
-								<label class="business-unit-name">Bussiness unit name</label>
+								<label class="custom-label">Bussiness unit name</label>
 								<input class="form-control" name="business-unit-name" id="business-unit-name" type="text" />
 							</div>
 					</div>
 					<div class="row">
 							<div class="col-md-12">
-									<label class="address">Address</label>
+									<label class="custom-label">Address</label>
 									<input class="form-control" name="address" id="address" type="text" />
 							</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<label class="company-website-url">Company website URL</label>
+							<label class="custom-label">Company website URL</label>
 							<input class="form-control" name="company-website-url" id="company-website-url" type="url" placeholder="http://"/>
 						</div>			
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<label class="personal-website-url">Personal website URL</label>
+							<label class="custom-label">Personal website URL</label>
 							<input class="form-control" name="personal-website-url" id="personal-website-url" type="url" placeholder="http://" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<label class="linkedin-url">Linkedin URL</label>
+							<label class="custom-label">Linkedin URL</label>
 							<input class="form-control" name="linkedin-url" id="linkedin-url" type="url" placeholder="http://" pattern="http://.*" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
-							<label class="phone-number">Phone number</label>
+							<label class="custom-label">Phone number</label>
 							<input class="form-control" name="phone-number" id="phone-number" type="text" />
 						</div>
 					</div>
@@ -199,17 +199,10 @@
 						</div>
 					</div>
 
-
-
-
-
-
-
-
 	<!---------------- What describes you better ------------>
 					<div class="row">
 						<div class="col-md-12" id="describes-row">
-								<p class="what-describes-you-better">What describes you better</p>
+								<p class="custom-label">What describes you better</p>
 
 							<div class="describe">
 								<input type="checkbox" name="category1" id="category1"><label class="describes-label" for="category1"><span class="describes-padding">Category 1</span></label>
@@ -249,7 +242,7 @@
 	<!---------------- Investor ID ------------>
 					<div class="row">
 							<div class="col-md-12">
-								<label class="investor-id">Investor ID</label>
+								<label class="custom-label">Investor ID</label>
 								<input class="form-control" name="investor-id" id="investor-id" placeholder="2a86e4085a59" type="text" disabled/>
 							</div>
 					</div>
@@ -263,7 +256,7 @@
 					</div>
 					<div class="row">
 							<div class="col-md-12">
-								<p class="description">Description</p>
+								<p class="custom-label">Description</p>
 							</div>
 						</div>
 
@@ -276,7 +269,7 @@
 					</div>
 					<div class="row" id="character-info">
 							<div class="col-6 col-md-6" id="min-max">
-								<p class="min-max-char">Minimum 300 characters. Maximum 500 characters.</p>
+								<p class="custom-label">Minimum 300 characters. Maximum 500 characters.</p>
 							</div>
 							<div class="col-6 col-md-6">
 									<div id="charNum">
@@ -290,12 +283,12 @@
 	<!-------------------- Start End --------------->
 					<div class="row" id="start-end">
 							<div class="col-md-6">
-								<label class="start">Start</label>
-								<input class="form-control" name="start" id="start" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+								<label class="custom-label">Start</label>
+								<input class="form-control" name="start" id="start" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
 							</div>
 							<div class="col-md-6">
-								<label class="end">End</label>
-								<input class="form-control" name="end" id="end" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+								<label class="custom-label">End</label>
+								<input class="form-control" name="end" id="end" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
 							</div>
 					</div>
 
@@ -309,7 +302,7 @@
 
 					<div class="row">
 						<div class="col-md-6">
-							<label class="budget" for="budget">Budget</label>
+							<label class="custom-label" for="budget">Budget</label>
 							<div class="input-group">
 								<input type="text" class="form-control" id="budget" aria-label="Text input with dropdown button">
 								<div class="input-group-append">

@@ -95,29 +95,29 @@
 				<form action="#" method="POST">
 					<div class="row">
 							<div class="col-md-6">
-								<label class="first-name">First name</label>
+								<label class="custom-label">First name</label>
 								<input class="form-control" name="first-name" id="first-name" type="text" placeholder="John" disabled />
 							</div>
 							<div class="col-md-6">
-								<label class="last-name">Last name</label>
+								<label class="custom-label">Last name</label>
 								<input class="form-control" name="last-name" id="last-name" type="text" disabled />
 							</div>
 					</div>
 
 					<div class="row">
 							<div class="col-md-6">
-							<label class="date-of-birth"> Date of birth</label>
+							<label class="custom-label"> Date of birth</label>
 							<input class="form-control date" name="birthday" id="birthday" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" />
 							</div>
 							<div class="col-md-6">
-							<label class="email-address">Email Address</label>
+							<label class="custom-label">Email Address</label>
 							<input class="form-control" name="email" id="email" type="email" disabled />
 							</div>
 					</div>
 
 					<div class="row">
 						<div class="col-md-12">
-								<label class="name-of-institution">Name of the institution</label>
+								<label class="custom-label">Name of the institution</label>
 								<input class="form-control" name="name-of-institution" id="name-of-institution" type="text" />
 						</div>
 					</div>
@@ -137,37 +137,37 @@
 
 					<div class="row">
 						<div class="col-md-12">
-							<label class="address">Address</label>
+							<label class="custom-label">Address</label>
 							<input class="form-control" name="address" id="address" type="text" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<label class="institution-website-url">Institution website URL</label>
+							<label class="custom-label">Institution website URL</label>
 							<input class="form-control" name="company-website-url" id="company-website-url" type="url" placeholder="http://" pattern="http://.*"/>
 						</div>			
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<label class="personal-website-url">Personal website URL</label>
+							<label class="custom-label">Personal website URL</label>
 							<input class="form-control" name="personal-website-url" id="personal-website-url" type="url" placeholder="http://" pattern="http://.*" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<label class="linkedin-url">Linkedin URL</label>
+							<label class="custom-label">Linkedin URL</label>
 							<input class="form-control" name="linkedin-url" id="linkedin-url" type="url" placeholder="http://" pattern="http://.*" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
-							<label class="phone-number">Phone number</label>
+							<label class="custom-label">Phone number</label>
 							<input class="form-control" name="phone-number" id="phone-number" type="text" />
 						</div>
 					</div>
                     <div class="row">
 							<div class="col-md-12">
-								<label class="function">Function</label>
+								<label class="custom-label">Function</label>
 								<div class="custom-select1">
 									<select>
 										<option value="0"></option>
@@ -181,7 +181,7 @@
 					
                     <div class="row">
 							<div class="col-md-12">
-								<label class="research-unit-name">Research center / unit name</label>
+								<label class="custom-label">Research center / unit name</label>
 								<input class="form-control" name="research-unit-name" id="research-unit-name" type="text" /><i class="icon-ib-arrow-down"></i>
 							</div>
 					</div>
@@ -212,17 +212,10 @@
 						</div>
 					</div>
 
-
-
-
-
-
-
-
 <!---------------- What describes you better ------------>
 					<div class="row">
 						<div class="col-md-12" id="describes-row">
-								<p class="what-describes-you-better">What describes you better</p>
+								<p class="custom-label">What describes you better</p>
 
 							<div class="describe">
 								<input type="checkbox" name="category1" id="category1"><label class="describes-label" for="category1"><span class="describes-padding">Category 1</span></label>
@@ -269,22 +262,23 @@
 					<form action="#">
 						<div class="row">
 							<div class="col-md-12">
-								<label class="title">Title</label>
+								<label class="custom-label">Title</label>
 								<input class="form-control" name="title-publication" id="title-publication" type="text" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<label class="url">URL</label>
+								<label class="custom-label">URL</label>
 								<input class="form-control" name="url-publication" id="url-publication" type="url" placeholder="http://" pattern="http://.*" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<label class="upload">Upload</label>
+								<label class="custom-label">Upload</label>
 								<div class="" draggable='true'>
 									<div id='dropzone' class='dropzone'>
 										<p>Drop file here</p>
+										<input type="file" class="uploadFile" name="file">
 									</div>
 								</div>	
 							</div>
@@ -309,19 +303,19 @@
 					<form action="#">
 						<div class="row">
 							<div class="col-md-12">
-								<label class="institution">Institution</label>
+								<label class="custom-label">Institution</label>
 								<input class="form-control" name="institution" id="institution" type="text" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<label class="title">Title</label>
+								<label class="custom-label">Title</label>
 								<input class="form-control" name="title" id="title" type="text" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
-								<label class="country">Country</label>
+								<label class="custom-label">Country</label>
 							</div>
 						</div>
 						<div class="row">
@@ -342,12 +336,12 @@
 						</div>
 						<div class="row">
 							<div class="col-md-6">
-								<label class="from">From</label>
-								<input class="form-control" name="from" id="from" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" />
+								<label class="custom-label">From</label>
+								<input class="form-control date" name="from" id="from" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" />
 							</div>
 							<div class="col-md-6">
-								<label class="to">To</label>
-								<input class="form-control" name="to" id="to" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+								<label class="custom-label">To</label>
+								<input class="form-control" name="to" id="to" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
 							</div>
 						</div>
 						<div class="row">
@@ -370,19 +364,19 @@
 					<form action="#">
 						<div class="row">
 							<div class="col-md-12">
-								<label class="institution">Institution</label>
+								<label class="custom-label">Institution</label>
 								<input class="form-control" name="institution" id="institution" type="text" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<label class="title">Title</label>
+								<label class="custom-label">Title</label>
 								<input class="form-control" name="title" id="title" type="text" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
-								<label class="country">Country</label>
+								<label class="custom-label">Country</label>
 								<div class="custom-select1">
 									<select>
 										<option value="0"></option>
@@ -397,8 +391,8 @@
 								</div>
 							</div>
 							<div class="col-md-6">
-								<label class="date-award">Date</label>
-								<input class="form-control" name="date-award" id="date-award" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" />
+								<label class="custom-label">Date</label>
+								<input class="form-control" name="date-award" id="date-award" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" />
 							</div>
 						</div>
 						<div class="row">
@@ -421,13 +415,13 @@
 					<form action="#">
 						<div class="row">
 							<div class="col-md-12">
-								<label class="title">Title</label>
+								<label class="custom-label">Title</label>
 								<input class="form-control" name="title" id="title" type="text" />
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
-								<label class="country">Country</label>
+								<label class="custom-label">Country</label>
 								<div class="custom-select1">
 									<select>
 										<option value="0"></option>
@@ -442,8 +436,8 @@
 								</div>
 							</div>
 							<div class="col-md-6">
-								<label class="date-award">Date</label>
-								<input class="form-control" name="date-award" id="date-award" type="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" />
+								<label class="custom-label">Date</label>
+								<input class="form-control" name="date-award" id="date-award" type="text" onfocus = "(this.type = 'date')" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" />
 							</div>
 						</div>
 						<div class="row">
@@ -499,8 +493,9 @@ dropzone.on('dragleave dragend drop', function() {
 dropzone.on('drop',function(e) {
 	var files = e.originalEvent.dataTransfer.files;
 	// Now select your file upload field 
-	// $('input_field_file').prop('files',files)
-  });</script>
+	$('.uploadFile').prop('files',files)
+  });
+</script>
 		<!-- SUMMERNOTE -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 	<script type="text/javascript">  
