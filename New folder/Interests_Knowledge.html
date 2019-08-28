@@ -254,23 +254,20 @@ $(function() {
         var checked = $('.checked-interests-container').magicSuggest();
       });
 </script> -->
-<!-- Add Open and Active classes when clicked menu-button to show the right menu -->
 
+
+<!-- Add Open and Active classes when clicked menu-button to show the right menu -->
 	<script type="text/javascript">
        $(document).ready(function () {
            $('#menu-icon').on('click', function () {
                $('#sidebar').addClass('active');
-               $('footer').addClass('open');
-               $('#container').addClass('open');
-               $('.logo').addClass('open');
+               $('footer, #container, .logo').addClass('open');
            });
        });
        $(document).ready(function () {
            $("#close-icon").on('click', function(){
                $('#sidebar').removeClass('active');
-               $('footer').removeClass('open');
-               $('#container').removeClass('open');
-               $('.logo').removeClass('open');
+               $('footer, #container, .logo').removeClass('open');
            });
        });
    </script>
