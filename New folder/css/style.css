@@ -1320,12 +1320,14 @@ input[type="radio"] {
 }
 #interests-row input[type="checkbox"],
 #describes-row input[type="checkbox"],
-#forgotten-form input[type="checkbox"]{
+#forgotten-form input[type="checkbox"],
+.post input[type="checkbox"]{
 	display:none;
 }
 #interests-row input[type=checkbox] +label:before,
 #describes-row input[type=checkbox] +label:before,
-#forgotten-form input[type=checkbox] +label:before{
+#forgotten-form input[type=checkbox] +label:before,
+.post .interests-label:after {
 	content:"";
 	display:inline-block;
 	width:16px;
@@ -1341,7 +1343,8 @@ input[type="radio"] {
 }
 #interests-row input[type=checkbox]:checked + label:before,
 #describes-row input[type=checkbox]:checked + label:before,
-#forgotten-form input[type=checkbox]:checked + label:before{
+#forgotten-form input[type=checkbox]:checked + label:before,
+.post input[type="checkbox"]:checked + .interests-label:after {
 	content:"\e912";
 	font-family:'ibridge-icon';
 	color:#fff;
@@ -2376,4 +2379,115 @@ input:-webkit-autofill:active{
 	#close-icon{
 		margin-left: -12%!important;
 	}
+}
+
+/********************** FEEDS **********************/
+.feeds {
+	margin-top: 66px;
+	padding-top: 60px;
+}
+
+.feeds h1 {
+	font-size: 28px;
+	font-weight: bold;
+	color: #060609;
+	margin-bottom: 30px;
+}
+.feeds .filters{
+	padding-bottom: 30px;
+}
+.feeds ul {
+	padding-left: 0;
+}
+.feeds li {
+	display: inline;
+	list-style: none;
+	font-size: 14px;
+	padding: 10px 15px;
+	border-radius: 18px;
+	background-color: #f5f5f5;
+	color: #a1aca9;
+	margin-right: 10px;	
+}
+
+.feeds li.active{
+	background-color: #3aafa9;
+	color: var(--white-color);
+}
+
+.feeds .post {
+	padding: 20px;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.feeds .post .interested-check {
+	float: right;
+}
+
+.feeds .post .interests-label:after {
+	margin-left: 10px;
+}
+
+.feeds .filter-name {
+	font-size: 14px;
+	background-color: #f5f5f5;
+	color: #a1aca9;
+	padding: 5px 15px;
+	border-radius: 18px;
+	margin-bottom: 20px;	
+}
+
+.investor-button {
+	background-color: rgba(4, 104, 191, 0.1);
+	color: #0468bf;
+}
+
+.researcher-button {
+	background-color: rgba(251, 144, 57, 0.1);
+	color: #fb9039;
+}
+
+.suplier-button {
+	background-color: rgba(57, 81, 251, 0.1);
+	color: #3951fb;
+}
+
+.all-button {
+	background-color: rgba(57, 81, 251, 0.1);
+	color: #3951fb;
+}
+
+.post p:first-child {
+	padding-right: 75px;
+	font-size: 18px;
+	line-height: 1.44;
+	margin-bottom: 30px;
+	color: #060609;
+}
+
+.post a {
+	margin-left: 0;
+	color: #060609;
+}
+
+.post .icon-profile i {
+	font-size: 30px;
+}
+
+.post a p {
+	padding: 0 15px;
+	font-size: 14px;
+	display: inline;
+	margin: 0;
+	position: relative;
+	top: -6px;
+	color: #060609;
+}
+
+.post > p:last-child {
+	font-size: 14px;
+	display: inline;
+	margin: 0;
+	color: rgba(6, 6, 9, 0.3);
 }

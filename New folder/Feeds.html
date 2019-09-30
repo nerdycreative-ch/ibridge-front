@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
+	<title>Categories</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <span class="logo align-middle">LOGO</span>
+                </div>
+                <div class="col-md-4">
+                    <input type="text">
+                </div>
+                <div class="col-4">
+                    <span class="user">
+                        <a href="#" class="align-middle"><i class="icon-ib-notifications"></i></a>
+                        <a href="#" class="align-middle"><i class="icon-ib-chat"></i></a>
+                        <a href="#" class="align-middle">John</a>
+                        <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i></a>
+                        <a href="#" class="arrow-icon align-middle"><i class="icon-ib-arrow-down"></i></a>
+                        <button id="menu-icon">
+                            <i class="icon-ib-menu"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="feeds">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Feeds</h1>
+                    <div class="filters">
+                        <ul>
+                            <li>All</li>
+                            <li>Investor</li>
+                            <li>Start up</li>
+                            <li>Researher</li>
+                            <li>Supliers</li>
+                        </ul>
+                    </div>
+                    <div class="posts">
+                        <div class="post">
+                            <button class="filter-name">Investor</button>
+                            <span class="interested-check">
+                                <input type="checkbox" id="interested-checkbox">
+                                <label class="interests-label" for="interested-checkbox">Interested</label>
+                            </span>
+                            <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
+                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
+                            <p>Published Sep 25 at 11:52</p>
+                        </div>
+                        <div class="post">
+                            <button class="filter-name">Suplier</button>
+                            <span class="interested-check">
+                                <input type="checkbox" id="interested-checkbox">
+                                <label class="interests-label" for="interested-checkbox">Interested</label>
+                            </span>
+                            <p>Mel in quem periculis, mea possim urbanitas no, in sit debet nullam. Usu congue viderer vituperata ex, abhorreant neglegentur mel ad, putent habemus disputationi duo ea. Eu noluisse invenire corrumpit vis, at autem quando est, habeo inani mundi te mei.</p>
+                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
+                        </div>
+                        <div class="post">
+                            <button class="filter-name">Researcher</button>
+                            <span class="interested-check">
+                                <input type="checkbox" id="interested-checkbox">
+                                <label class="interests-label" for="interested-checkbox">Interested</label>
+                            </span>
+                            <p>Pri ad exerci ignota fuisset, duo ut scripta vituperata signiferumque.</p>
+                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
+                        </div>
+                        <div class="post">
+                            <button class="filter-name">All</button>
+                            <span class="interested-check">
+                                <input type="checkbox" id="interested-checkbox">
+                                <label class="interests-label" for="interested-checkbox">Interested</label>
+                            </span>
+                            <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
+                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var filterElement = $(".filter-name");
+        var filter = filterElement.html();
+        switch (filter) { 
+            case "Investor": 
+                $(filter).addClass("investor-button");
+                break;
+            case "All": 
+                $(filterElement).addClass("all-button");
+                break;
+            case "Suplier": 
+                 $(filterElement).addClass("suplier-button");
+                break;		
+            case "Researcher": 
+                 $(filterElement).addClass("researcher-button");
+                break;
+            default:
+                alert("hi");
+        }
+
+    </script>
+</body>
+</html>
