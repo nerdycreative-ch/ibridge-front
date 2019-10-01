@@ -24,8 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-ib-minus:before {
+.icon-ib-filter:before {
   content: "\e917";
+}
+.icon-ib-minus:before {
+  content: "\e918";
 }
 .icon-ib-arrow-next:before {
   content: "\e915";

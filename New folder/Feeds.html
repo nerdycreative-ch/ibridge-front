@@ -4,26 +4,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/ibridge-icon.css">
-	<title>Categories</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<title>Feeds</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <header>
+    <header id="feeds-header">
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     <span class="logo align-middle">LOGO</span>
                 </div>
-                <div class="col-md-4">
-                    <input type="text">
+                <div class="col-md-6">
+                    <form action="#">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn dropdown-toggle" type="button" id="searchByFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                                <div class="input-group-append">
+                                    <i class="icon-search"></i>
+                                </div>
+                                <input type="text" class="form-control search-post" placeholder="Search by name, keyword and more…" name="search-post">
+                                <div class="input-group-append">
+                                    <i class="icon-filter"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <span class="user">
                         <a href="#" class="align-middle"><i class="icon-ib-notifications"></i></a>
                         <a href="#" class="align-middle"><i class="icon-ib-chat"></i></a>
                         <a href="#" class="align-middle">John</a>
-                        <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i></a>
+                        <a href="#"><img src="images/imgg.jpg" class="profile-icon"></a>
                         <a href="#" class="arrow-icon align-middle"><i class="icon-ib-arrow-down"></i></a>
                         <button id="menu-icon">
                             <i class="icon-ib-menu"></i>
@@ -38,80 +57,140 @@
             <div class="row">
                 <div class="col-md-8">
                     <h1>Feeds</h1>
-                    <div class="filters">
-                        <ul>
-                            <li>All</li>
-                            <li>Investor</li>
-                            <li>Start up</li>
-                            <li>Researher</li>
-                            <li>Supliers</li>
-                        </ul>
-                    </div>
+                    <ul class="filters-label">
+                        <a href="#"><li class="filter-name active">All</li></a>
+                        <a href="#"><li class="filter-name">Investor</li></a>
+                        <a href="#"><li class="filter-name">Start up</li></a>
+                        <a href="#"><li class="filter-name">Researher</li></a>
+                        <a href="#"><li class="filter-name">Supliers</li></a>
+                    </ul>
                     <div class="posts">
                         <div class="post">
-                            <button class="filter-name">Investor</button>
-                            <span class="interested-check">
-                                <input type="checkbox" id="interested-checkbox">
-                                <label class="interests-label" for="interested-checkbox">Interested</label>
+                            <label class="filter-name filter-padding">Investor</label>
+                            <span class="filters-check">
+                                <input type="checkbox" id="interested-checkbox1">
+                                <label class="filter-label" for="interested-checkbox1">Interested</label>
                             </span>
                             <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
-                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
-                            <p>Published Sep 25 at 11:52</p>
+                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                            <p class="published-time">Published Sep 25 at 11:52</p>
+                            <p>100 views</p>
                         </div>
                         <div class="post">
-                            <button class="filter-name">Suplier</button>
-                            <span class="interested-check">
-                                <input type="checkbox" id="interested-checkbox">
-                                <label class="interests-label" for="interested-checkbox">Interested</label>
-                            </span>
-                            <p>Mel in quem periculis, mea possim urbanitas no, in sit debet nullam. Usu congue viderer vituperata ex, abhorreant neglegentur mel ad, putent habemus disputationi duo ea. Eu noluisse invenire corrumpit vis, at autem quando est, habeo inani mundi te mei.</p>
-                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
-                        </div>
-                        <div class="post">
-                            <button class="filter-name">Researcher</button>
-                            <span class="interested-check">
-                                <input type="checkbox" id="interested-checkbox">
-                                <label class="interests-label" for="interested-checkbox">Interested</label>
+                            <label class="filter-name filter-padding">Researcher</label>
+                            <span class="filters-check">
+                                <input type="checkbox" id="interested-checkbox2">
+                                <label class="filter-label" for="interested-checkbox2">Interested</label>
                             </span>
                             <p>Pri ad exerci ignota fuisset, duo ut scripta vituperata signiferumque.</p>
-                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
+                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                            <p class="published-time">Published Sep 25 at 11:52</p>
+                            <p>100 views</p>
                         </div>
                         <div class="post">
-                            <button class="filter-name">All</button>
-                            <span class="interested-check">
-                                <input type="checkbox" id="interested-checkbox">
-                                <label class="interests-label" for="interested-checkbox">Interested</label>
+                            <label class="filter-name filter-padding">Suplier</label>
+                            <span class="filters-check">
+                                <input type="checkbox" id="interested-checkbox3">
+                                <label class="filter-label" for="interested-checkbox3">Interested</label>
+                            </span>
+                            <p>Mel in quem periculis, mea possim urbanitas no, in sit debet nullam. Usu congue viderer vituperata ex, abhorreant neglegentur mel ad, putent habemus disputationi duo ea. Eu noluisse invenire corrumpit vis, at autem quando est, habeo inani mundi te mei.</p>
+                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                            <p class="published-time">Published Sep 25 at 11:52</p>
+                            <p>100 views</p>
+                        </div>
+                        <div class="post">
+                            <label class="filter-name filter-padding">All</label>
+                            <span class="filters-check">
+                                <input type="checkbox" id="interested-checkbox4">
+                                <label class="filter-label" for="interested-checkbox4">Interested</label>
                             </span>
                             <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
-                            <a href="#" class="icon-profile align-middle"><i class="icon-ib-profile"></i><p>John Doe</p></a>
+                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                            <p class="published-time">Published Sep 25 at 11:52</p>
+                            <p>100 views</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
+                    <h4>FILTERS</h4>
+                    <p>Scientific Disciplines</p>
+                    <ul class="filters">
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox1">
+                            <label class="filter-label" for="discipline-checkbox1">Electronics, IT & Telecomms</label><span>359</span>
+                        </li>
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox2">
+                            <label class="filter-label" for="discipline-checkbox2">Electronis, Microelectronics</label><span>83</span>
+                        </li>
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox3">
+                            <label class="filter-label" for="discipline-checkbox3">Information Processing & Systems, … Workflow</label><span>14</span>
+                        </li>
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox4">
+                            <label class="filter-label" for="discipline-checkbox4">Electronis, Microelectronics</label><span>5</span>
+                        </li>
+                    </ul>
+                    <p>Industrials Sectors</p>
+                    <ul class="filters">
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox1">
+                            <label class="filter-label" for="discipline-checkbox1">Electronics, IT & Telecomms</label><span>359</span>
+                        </li>
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox2">
+                            <label class="filter-label" for="discipline-checkbox2">Electronis, Microelectronics</label><span>83</span>
+                        </li>
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox3">
+                            <label class="filter-label" for="discipline-checkbox3">Information Processing & Systems, … Workflow</label><span>14</span>
+                        </li>
+                        <li class="filter-name">
+                            <input type="checkbox" id="discipline-checkbox4">
+                            <label class="filter-label" for="discipline-checkbox4">Electronis, Microelectronics</label><span>5</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        var filterElement = $(".filter-name");
-        var filter = filterElement.html();
-        switch (filter) { 
-            case "Investor": 
-                $(filter).addClass("investor-button");
-                break;
-            case "All": 
-                $(filterElement).addClass("all-button");
-                break;
-            case "Suplier": 
-                 $(filterElement).addClass("suplier-button");
-                break;		
-            case "Researcher": 
-                 $(filterElement).addClass("researcher-button");
-                break;
-            default:
-                alert("hi");
-        }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var filterElement = $(".post .filter-name");
+        filterElement.each(function() {
+            var filter = $(this).text();
+            switch (filter) { 
+                case "Investor": 
+                    $(this).addClass("investor-label");
+                    break;
+                case "All": 
+                    $(this).addClass("all-label");
+                    break;
+                case "Suplier": 
+                    $(this).addClass("suplier-label");
+                    break;		
+                case "Researcher": 
+                    $(this).addClass("researcher-label");
+                    break;
+                default:
+                    $(this).addClass("default-label");
+            }
+        });
+
+        // Change color of the buttons when filter is changed
+        $(".filters-label .filter-name").on("click", function() {
+            $(".filters-label").find(".active").removeClass("active");
+            $(this).addClass("active");
+            var selectedFilter = $(this).text();
+            alert(selectedFilter);
+        });
+    });
 
     </script>
+  
 </body>
 </html>
