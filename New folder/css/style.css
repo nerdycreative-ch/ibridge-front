@@ -883,7 +883,7 @@ input[type="radio"] {
 .vertical-line {
 	width:0;
 	height:15px;
-	border:solid 1px rgba(255,
+	border:solid 0.5px rgba(255,
 	255,
 	255,
 	0.15);
@@ -2474,6 +2474,28 @@ input:-webkit-autofill:active{
 	height: 36px;
 }
 
+#feeds-header .vertical-line {
+	width: 20px;
+}
+
+#feeds-header .icon-arrow-circle {
+	border: 1px solid #3aafa9;
+    padding-left: 14px;
+    background-color: #3aafa9;
+	border-radius: 7.5px;
+	top: 3px;
+    position: relative;
+	margin-left: -7px;
+}
+
+#feeds-header .icon-ib-arrow-down {
+	font-size: 6px!important;
+    padding: 3.5px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -13px;
+}
+
 .feeds h1 {
 	font-size: 28px;
 	font-weight: bold;
@@ -2507,6 +2529,19 @@ input:-webkit-autofill:active{
 	color: var(--white-color);
 }
 
+.btn-sort-by {
+	color: #a1aca9!important;
+	font-size: 14px;
+	font-weight: normal!important;
+	float: right;
+	padding: 0 0 10px!important;
+}
+
+.btn-sort-by i {
+	font-size: 8px;
+	color: #a1aca9!important;
+}
+
 .feeds .post {
 	padding: 20px;
 	margin-bottom: 30px;
@@ -2516,7 +2551,7 @@ input:-webkit-autofill:active{
 
 .feeds .post .filters-check {
 	float: right;
-	margin-right: 26px;
+	margin-right: 3px;
 }
 
 .feeds .post .interests-label:after {
@@ -2559,11 +2594,7 @@ input:-webkit-autofill:active{
 	color: #a1aca9;
 }
 
-.feeds input[type="checkbox"] {
-	display:none;
-}
-
-.post input[type="checkbox"] + .filter-label:after {
+.post input[type="checkbox"]:before {
 	content:"";
 	display:inline-block;
 	width:16px;
@@ -2575,11 +2606,9 @@ input:-webkit-autofill:active{
 	0.5);
 	border-radius:3px;
 	position:absolute;
-	margin-top:3px;
-	margin-left: 10px;
 }
 
-.post input[type="checkbox"]:checked + .filter-label:after {
+.post input[type="checkbox"]:checked:before {
 	content:"\e912";
 	font-family:'ibridge-icon';
 	color:#fff;
@@ -2591,10 +2620,9 @@ input:-webkit-autofill:active{
 	background-color: #3aafa9;
 	border: 1px solid #3aafa9;
 	border-radius:3px;
-	margin-left: 10px;
 }
 
-.filters input[type="checkbox"] + .filter-label:before {
+.filters input[type="checkbox"]:before {
 	content:"";
 	display:inline-block;
 	width:16px;
@@ -2606,11 +2634,9 @@ input:-webkit-autofill:active{
 	0.5);
 	border-radius:3px;
 	position: absolute;
-	margin-top:3px;
-	margin-right: 10px;
 }
 
-.filters input[type="checkbox"]:checked + .filter-label:before {
+.filters input[type="checkbox"]:checked:before {
 	content:"\e912";
 	font-family:'ibridge-icon';
 	color:#fff;
@@ -2622,12 +2648,24 @@ input:-webkit-autofill:active{
 	background-color: #3aafa9;
 	border: 1px solid #3aafa9;
 	border-radius:3px;
-	margin-right: 10px;
 }
 
-.filter-label {
+.filters .custom-checkbox-label {
+	padding-left: 10px;
 	font-size: 14px;
 	color: rgba(6, 6, 9, 0.7);
+}
+
+.post .custom-checkbox-label {
+	padding-right: 10px;
+	font-size: 14px;
+	color: rgba(6, 6, 9, 0.7);
+}
+
+.filters .filter-name > span:last-of-type {
+	float: right;
+	font-size: 14px;
+	color: #a1aca9;
 }
 
 .post > p:first-of-type {
@@ -2671,4 +2709,16 @@ input:-webkit-autofill:active{
 
 .filters {
 	padding: 0;
+}
+
+.filters-heading {
+	font-size: 14px;
+	color: #060609;
+	padding: 17px 0 30px;
+}
+
+.scientific-filters h3, .industrial-filters h3 {
+	font-size: 16px;
+	color: #a1aca9;
+	margin-bottom: 20px;
 }
