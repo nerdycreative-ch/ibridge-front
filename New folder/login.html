@@ -57,14 +57,14 @@
                             </p>
                             <div class="form-group">
                                 <div class="col-md-12 input">
-                                    <input class="inputText" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" type="text" value="" />
+                                    <input class="inputText" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" type="text" value="email@email.com" />
                                     <span class="floating-label">Email address</span>
                                     <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12 input">
-                                    <input class="inputPassword" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
+                                    <input class="inputText" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
                                     <span class="floating-label">Password</span>
                                     <a class="show-link" onclick="showPassword()">Show</a>
                                 </div>
@@ -110,13 +110,15 @@
         
         });
     });
-    $(".inputText").focusout(function() {
-        var n = $(this).val();
-        n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
+    
+    $(".inputText").each(function () {
+        if ($(this).val()) {
+            $(this).next().addClass("focus");
+        }
     });
-    $(".inputPassword").focusout(function() {
-        var n = $(this).val();
-        n != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
+    $(".inputText").focusout(function () {
+        var text = $(this).val();
+        text != "" ? $(this).next().addClass("focus") : $(this).next().removeClass("focus")
     });
     </script>
 

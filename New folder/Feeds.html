@@ -8,226 +8,241 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <header id="feeds-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <span class="logo align-middle">LOGO</span>
-                </div>
-                <div class="col-md-6">
-                    <form action="#">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button class="btn dropdown-toggle" type="button" id="searchByFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
-                                <div class="input-group-append">
-                                    <i class="icon-search"></i>
-                                </div>
-                                <input type="text" class="form-control search-post" placeholder="Search by name, keyword and more…" name="search-post">
-                                <div class="input-group-append">
-                                    <i class="icon-filter"></i>
+<header id="feeds-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <span class="logo align-middle">LOGO</span>
+            </div>
+            <div class="col-md-6">
+                <form action="#">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn dropdown-toggle" type="button" id="searchByFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-3">
-                    <span class="user">
-                        <a href="#" class="align-middle"><i class="icon-ib-notifications"></i></a>
-                        <a href="#" class="align-middle"><i class="icon-ib-chat"></i></a>
-                        <span class="vertical-line align-middle"></span>
-                        <a href="#" class="align-middle">John</a>
-                        <a href="#"><img src="images/imgg.jpg" class="profile-icon"></a>
-                        <a href="#" class="icon-arrow-circle"><i class="icon-ib-arrow-down"></i></a>
-                        <button id="menu-icon">
-                            <i class="icon-ib-menu"></i>
-                        </button>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="feeds">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1>Feeds</h1>
-                    <ul class="filters-label">
-                        <a href="#"><li class="filter-name active">All</li></a>
-                        <a href="#"><li class="filter-name">Investor</li></a>
-                        <a href="#"><li class="filter-name">Start up</li></a>
-                        <a href="#"><li class="filter-name">Researcher</li></a>
-                        <a href="#"><li class="filter-name">Supliers</li></a>
-                        <button class="btn bg-transparent btn-sort-by">Sort by<i class="icon-ib-arrow-down"></i></button>
-                    </ul>
-                    <div class="posts">
-                        <div class="post">
-                            <label class="filter-name filter-padding">Investor</label>
-                            <span class="filters-check">
-                                <label class="filter-label">
-                                    <span class="custom-checkbox-label">Interested</span>
-                                    <input type="checkbox">
-                                </label>
-                            </span>
-                            <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
-                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
-                            <p class="published-time">Published Sep 25 at 11:52</p>
-                            <p>100 views</p>
-                        </div>
-                        <div class="post">
-                            <label class="filter-name filter-padding">Researcher</label>
-                            <span class="filters-check">
-                                <label class="filter-label">
-                                    <span class="custom-checkbox-label">Interested</span>
-                                    <input type="checkbox">
-                                </label>
-                            </span>
-                            <p>Pri ad exerci ignota fuisset, duo ut scripta vituperata signiferumque.</p>
-                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
-                            <p class="published-time">Published Sep 25 at 11:52</p>
-                            <p>100 views</p>
-                        </div>
-                        <div class="post">
-                            <label class="filter-name filter-padding">Suplier</label>
-                            <span class="filters-check">
-                                <label class="filter-label">
-                                    <span class="custom-checkbox-label">Interested</span>
-                                    <input type="checkbox">
-                                </label>
-                            </span>
-                            <p>Mel in quem periculis, mea possim urbanitas no, in sit debet nullam. Usu congue viderer vituperata ex, abhorreant neglegentur mel ad, putent habemus disputationi duo ea. Eu noluisse invenire corrumpit vis, at autem quando est, habeo inani mundi te mei.</p>
-                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
-                            <p class="published-time">Published Sep 25 at 11:52</p>
-                            <p>100 views</p>
-                        </div>
-                        <div class="post">
-                            <label class="filter-name filter-padding">All</label>
-                            <span class="filters-check">
-                                <label class="filter-label">
-                                    <span class="custom-checkbox-label">Interested</span>
-                                    <input type="checkbox">
-                                </label>
-                            </span>
-                            <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
-                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
-                            <p class="published-time">Published Sep 25 at 11:52</p>
-                            <p>100 views</p>
-                        </div>
-                        <div class="post">
-                            <label class="filter-name filter-padding">Start up</label>
-                            <span class="filters-check">
-                                <label class="filter-label">
-                                    <span class="custom-checkbox-label">Interested</span>
-                                    <input type="checkbox">
-                                </label>
-                            </span>
-                            <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
-                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
-                            <p class="published-time">Published Sep 25 at 11:52</p>
-                            <p>100 views</p>
-                        </div>
-                        <div class="post">
-                            <label class="filter-name filter-padding">1Start Up</label>
-                            <span class="filters-check">
-                                <label class="filter-label">
-                                    <span class="custom-checkbox-label">Interested</span>
-                                    <input type="checkbox">
-                                </label>
-                            </span>
-                            <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
-                            <a href="#"><img src="images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
-                            <p class="published-time">Published Sep 25 at 11:52</p>
-                            <p>100 views</p>
+                            <div class="input-group-append">
+                                <i class="icon-search"></i>
+                            </div>
+                            <input type="text" class="form-control search-post" placeholder="Search by name, keyword and more…" name="search-post">
+                            <i class="icon-filter"></i>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="filters-heading">FILTERS</h4>
-                    <section class="scientific-filters">
-                        <h3>Scientific Disciplines</h3>
-                        <ul class="filters">
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Electronics, IT & Telecomms</span>
-                                </label>
-                                <span>359</span>
-                            </li>
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Electronis, Microelectronics</span>
-                                </label>
-                                <span>83</span>
-                            </li>
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Information Processing & Systems, Workflow</span>
-                                </label>
-                                <span>14</span>
-                            </li>
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Electronis, Microelectronics</span>
-                                </label>
-                                <span>5</span>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="industrial-filters">
-                        <h3>Industrials Sectors</h3>
-                        <ul class="filters">
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Electronics, IT & Telecomms</span>
-                                </label>
-                                <span>359</span>
-                            </li>
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Electronis, Microelectronics</span>
-                                </label>
-                                <span>83</span>
-                            </li>
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Information Processing & Systems, Workflow</span>
-                                </label>
-                                <span>14</span>
-                            </li>
-                            <li class="filter-name">
-                                <label class="filter-label">
-                                    <input type="checkbox">
-                                    <span class="custom-checkbox-label">Electronis, Microelectronics</span>
-                                </label>
-                                <span>5</span>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
+                </form>
+            </div>
+            <div class="col-3">
+                <span class="user">
+                    <a href="#" class="align-middle"><i class="icon-ib-notifications"></i></a>
+                    <a href="#" class="align-middle"><i class="icon-ib-chat"></i></a>
+                    <span class="vertical-line align-middle"></span>
+                    <a href="#" class="align-middle">John</a>
+                    <a href="#"><img src="../Content/images/imgg.jpg" class="profile-icon"></a>
+                    <a href="#" class="icon-arrow-circle"><i class="icon-ib-arrow-down"></i></a>
+                    <button id="menu-icon">
+                        <i class="icon-ib-menu"></i>
+                    </button>
+                </span>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
-    <script type="text/javascript">
-    $(document).ready(function(){
+</header>
+<div class="feeds">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Feeds</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="filters-label">
+                            <a href="#"><li class="filter-name active">All</li></a>
+                            <a href="#"><li class="filter-name">Investor</li></a>
+                            <a href="#"><li class="filter-name">Start up</li></a>
+                            <a href="#"><li class="filter-name">Researcher</li></a>
+                            <a href="#"><li class="filter-name">Suplier</li></a>
+                            <li class="sort-by-group">
+                                <button class="btn dropdown-toggle bg-transparent" type="button" id="sortByFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sort-by-text">Sort by:</span> <span></span></button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" tabindex="-1" href="#">Action</a>
+                                    <a class="dropdown-item" tabindex="-1" href="#">Another action</a>
+                                    <a class="dropdown-item" tabindex="-1" href="#">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="posts">
+                    <div class="post">
+                        <label class="filter-name filter-padding">Investor</label>
+                        <span class="filters-check">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Interested</span>
+                            </label>
+                        </span>
+                        <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
+                        <a href="#"><img src="../Content/images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                        <p class="published-time">Published Sep 25 at 11:52</p>
+                        <p>100 views</p>
+                    </div>
+                    <div class="post">
+                        <label class="filter-name filter-padding">Researcher</label>
+                        <span class="filters-check">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Interested</span>
+                            </label>
+                        </span>
+                        <p>Pri ad exerci ignota fuisset, duo ut scripta vituperata signiferumque.</p>
+                        <a href="#"><img src="../Content/images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                        <p class="published-time">Published Sep 25 at 11:52</p>
+                        <p>100 views</p>
+                    </div>
+                    <div class="post">
+                        <label class="filter-name filter-padding">Suplier</label>
+                        <span class="filters-check">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Interested</span>
+                            </label>
+                        </span>
+                        <p>Mel in quem periculis, mea possim urbanitas no, in sit debet nullam. Usu congue viderer vituperata ex, abhorreant neglegentur mel ad, putent habemus disputationi duo ea. Eu noluisse invenire corrumpit vis, at autem quando est, habeo inani mundi te mei.</p>
+                        <a href="#"><img src="../Content/images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                        <p class="published-time">Published Sep 25 at 11:52</p>
+                        <p>100 views</p>
+                    </div>
+                    <div class="post">
+                        <label class="filter-name filter-padding">Investor</label>
+                        <span class="filters-check">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Interested</span>
+                            </label>
+                        </span>
+                        <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
+                        <a href="#"><img src="../Content/images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                        <p class="published-time">Published Sep 25 at 11:52</p>
+                        <p>100 views</p>
+                    </div>
+                    <div class="post">
+                        <label class="filter-name filter-padding">Start up</label>
+                        <span class="filters-check">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Interested</span>
+                            </label>
+                        </span>
+                        <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
+                        <a href="#"><img src="../Content/images/imgg.jpg" class="profile-icon"><p>John Doe</p></a>
+                        <p class="published-time">Published Sep 25 at 11:52</p>
+                        <p>100 views</p>
+                    </div>
+                    <div class="post">
+                        <label class="filter-name filter-padding">1Start Up</label>
+                        <span class="filters-check">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Interested</span>
+                            </label>
+                        </span>
+                        <p>Elit prompta et cum. Decore interesset duo at, usu ut oratio mentitum salutandi. An quot brute feugiat duo. Soleat vocibus maiestatis mel ne, ad quo deleniti verterem evertitur.</p>
+                        <a href="#"><img src="../Content/images/imgg.jpg" class="profile-icon"> <p>John Doe</p></a>
+                        <p class="published-time">Published Sep 25 at 11:52</p>
+                        <p>100 views</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="filters-heading">FILTERS</h4>
+                <section class="scientific-filters">
+                    <h3>Scientific Disciplines</h3>
+                    <ul class="filters">
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Electronics, IT & Telecomms</span>
+                            </label>
+                            <span>359</span>
+                        </li>
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Electronis, Microelectronics</span>
+                            </label>
+                            <span>83</span>
+                        </li>
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Information Processing & Systems, Workflow</span>
+                            </label>
+                            <span>14</span>
+                        </li>
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Electronis, Microelectronics</span>
+                            </label>
+                            <span>5</span>
+                        </li>
+                    </ul>
+                </section>
+                <section class="industrial-filters">
+                    <h3>Industrials Sectors</h3>
+                    <ul class="filters">
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Electronics, IT & Telecomms</span>
+                            </label>
+                            <span>359</span>
+                        </li>
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Electronis, Microelectronics</span>
+                            </label>
+                            <span>83</span>
+                        </li>
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Information Processing & Systems, Workflow</span>
+                            </label>
+                            <span>14</span>
+                        </li>
+                        <li class="filter-name">
+                            <label class="filter-label">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-label">Electronis, Microelectronics</span>
+                            </label>
+                            <span>5</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
 
-        //create id for filter-classes
+        $(".sort-by-group .dropdown-menu a").click(function () {
+
+            $("#sortByFilter span:last-child").text($(this).text());
+            $("#sortByFilter").val($(this).text());
+        });
+
+    });
+    $(document).ready(function () {
+
+        //create classes for filter-classes
         function checkClasses() {
-            $(".post .filter-name, .filters-label .filter-name").each(function() {
+            $(".post .filter-name, .filters-label .filter-name").each(function () {
                 var strings = $(this).text();
                 var character = '';
                 var newString = "";
@@ -240,14 +255,14 @@
 
                         // check if char is an empty space char
                         // if yes, replace it with a dash (-)
-                        if (character == emptyChar){
+                        if (character == emptyChar) {
                             character = '-';
                             newString += character;
 
                             // check if the next char if Uppercase
                             // if yes, make it lowercase
-                            if (strings.charAt(i+1).toUpperCase()){
-                                character = strings.charAt(i+1).toLowerCase()
+                            if (strings.charAt(i + 1).toUpperCase()) {
+                                character = strings.charAt(i + 1).toLowerCase()
                                 newString += character;
                                 i++;
                             }
@@ -260,8 +275,8 @@
 
                             // check if the next char if Uppercase
                             // if yes, make it lowercase
-                            if (strings.charAt(i+1).toUpperCase()){
-                                character = strings.charAt(i+1).toLowerCase()
+                            if (strings.charAt(i + 1).toUpperCase()) {
+                                character = strings.charAt(i + 1).toLowerCase()
                                 newString += character;
                                 i++;
                             }
@@ -269,6 +284,7 @@
                         }
                     }
                     else {
+                        //otherwise, add the character to the new string
                         if (character == character.toUpperCase()) {
                             character = character.toLowerCase();
                             newString += character;
@@ -278,55 +294,103 @@
                             newString += character;
                             i++;
                         }
-                        
+
                     }
                 }
+                // add suffix "-posts" to the class
                 newString += "-posts";
                 $(this).addClass(newString);
             });
         };
         checkClasses();
 
-        // Change color of the buttons when filter is changed
-        // $(".post").each(function() {
-        //     var filter = $(this + "[class*=\"-posts\"]");
-        //     alert(filter.text());
-        //     switch (filter) { 
-        //         case $(filter).: 
-        //             $(this).addClass("investor-label");
-        //             break;
-        //         case "All": 
-        //             $(this).addClass("all-label");
-        //             break;
-        //         case "Suplier": 
-        //             $(this).addClass("suplier-label");
-        //             break;		
-        //         case "Researcher": 
-        //             $(this).addClass("researcher-label");
-        //             break;
-        //         default:
-        //             $(this).addClass("default-label");
-        //     }
-        // });
+        // filter posts when label changes
+        $(".filters-label .filter-name").on("click", function () {
+            $(".post").show();
 
-        // $(".filters-label .filter-name").on("click", function() {
-        //     var classList = $(this).attr("class").split(/\s+/);
-        //     alert(classList);
-        //     var numClass = classList.length;
-        //     var wantedClass = classList[numClass-1];
-        //     alert(wantedClass);
-        //     $(".filters-label").find(".active").removeClass("active");
-        //     $(this).addClass("active");
-        //     debugger;
-        //     $(".post .filter-name").each( function () {
-        //         var bool= true;
-        //         bool = $(this).hasClass(wantedClass);
-        //         $(this).hide();
-        //     });
-        // });
+            //if all label is selected, show all posts
+            if ($(this).hasClass("all-posts")) {
+                $(".filters-label").find(".active").removeClass("active");
+                $(this).addClass("active");
+                $(".post").show();
+            }
+            else {
+                //change the color of the button with 'active' class
+                $(".filters-label").find(".active").removeClass("active");
+                $(this).addClass("active");
+
+                //get all classes of the clicked element
+                var classList = $(this).attr("class").split(/\s+/);
+                var numClass = classList.length;
+
+                //get the last class before 'active'
+                var wantedClass = classList[numClass - 2];
+
+                //hide all posts except selected ones
+                var hidePosts = $(".posts").find(".filter-name:not(." + wantedClass + ")");
+                $(hidePosts).parent().hide();
+            }
+        });
     });
 
-    </script>
-  
+</script>
+<script>
+
+    $(document).ready(function () {
+        getCountries();
+    });
+
+    function getCountries() {
+        $.ajax({
+            url: "/api/Addresses/CountryRegion",
+            type: "GET",
+            data: {},
+            success: function (data) {
+                console.log('data', data);
+                renderCountries(data);
+            }
+        });
+    }
+
+    function renderCountries(countries) {
+        let htmlElements = '<option selected>Country</option>';
+        $.each(countries, function (i, country) {
+            htmlElements += countryToHTML(country);
+        });
+        $('#country').html(htmlElements);
+    }
+
+    function countryToHTML(country) {
+        return '<option value="' + country.countryRegionCode + '">' + country.name + '</option>';
+    }
+
+    $('#country').on('change', function () {
+        getStateProvinces(this.value);
+    });
+
+    function getStateProvinces(countryRegionCode) {
+        $.ajax({
+            url: "/api/Addresses/States",
+            type: "GET",
+            data: { countryRegionCode: countryRegionCode },
+            success: function (data) {
+                console.log('country regions', data);
+                renderStates(data);
+            }
+        });
+    }
+
+    function renderStates(states) {
+        let htmlElements = ' <option selected>State</option>';
+        $.each(states, function (i, states) {
+            htmlElements += stateToHTML(states);
+        });
+        $('#state').html(htmlElements);
+    }
+
+    function stateToHTML(state) {
+        return '<option value="' + state.stateProvinceID + '">' + state.name + '</option>';
+    }
+</script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'ibridge-icon';
-  src:  url('../fonts/ibridge-icon.eot?1mio1r');
-  src:  url('../fonts/ibridge-icon.eot?1mio1r#iefix') format('embedded-opentype'),
-    url('../fonts/ibridge-icon.ttf?1mio1r') format('truetype'),
-    url('../fonts/ibridge-icon.woff?1mio1r') format('woff'),
-    url('../fonts/ibridge-icon.svg?1mio1r#ibridge-icon') format('svg');
+  src:  url('fonts/ibridge-icon.eot?9fpt87');
+  src:  url('fonts/ibridge-icon.eot?9fpt87#iefix') format('embedded-opentype'),
+    url('fonts/ibridge-icon.ttf?9fpt87') format('truetype'),
+    url('fonts/ibridge-icon.woff?9fpt87') format('woff'),
+    url('fonts/ibridge-icon.svg?9fpt87#ibridge-icon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -23,6 +24,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-ib-hide:before {
   content: "\e919";
 }
